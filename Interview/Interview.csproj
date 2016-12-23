@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D857E4FC-6D63-48FC-8ECE-234C37F7A606}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Interview</RootNamespace>
+    <AssemblyName>Interview</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithm\DynamicProgramming\MinCoins.cs" />
+    <Compile Include="Algorithm\Other\CrossingLists.cs" />
+    <Compile Include="Algorithm\Other\CycleLists.cs" />
+    <Compile Include="Algorithm\DynamicProgramming\Factorial.cs" />
+    <Compile Include="Algorithm\DynamicProgramming\Fibonacci.cs" />
+    <Compile Include="Algorithm\Other\InvertString.cs" />
+    <Compile Include="Algorithm\Other\KMP.cs" />
+    <Compile Include="Algorithm\Other\Knapsack.cs" />
+    <Compile Include="Algorithm\Other\LCS.cs" />
+    <Compile Include="Algorithm\DynamicProgramming\LIS.cs" />
+    <Compile Include="Algorithm\Other\MAXSubarray.cs" />
+    <Compile Include="Algorithm\Other\MergeSortedLinkedLists.cs" />
+    <Compile Include="Algorithm\Other\Wave.cs" />
+    <Compile Include="Algorithm\Search\BinarySearch.cs" />
+    <Compile Include="Algorithm\Sort\HeapSort.cs" />
+    <Compile Include="Algorithm\Sort\InsertSort.cs" />
+    <Compile Include="Algorithm\Sort\QuickSort.cs" />
+    <Compile Include="Data_Structure\BinaryTree.cs" />
+    <Compile Include="Data_Structure\LinkedList.cs" />
+    <Compile Include="Data_Structure\PriorityQueue.cs" />
+    <Compile Include="LeetCode\Question100.cs" />
+    <Compile Include="LeetCode\Question136.cs" />
+    <Compile Include="LeetCode\Question155.cs" />
+    <Compile Include="LeetCode\Question18.cs" />
+    <Compile Include="LeetCode\Question189.cs" />
+    <Compile Include="LeetCode\Question151.cs" />
+    <Compile Include="LeetCode\Question206.cs" />
+    <Compile Include="LeetCode\Question21.cs" />
+    <Compile Include="LeetCode\Question226.cs" />
+    <Compile Include="LeetCode\Question237.cs" />
+    <Compile Include="LeetCode\Question24.cs" />
+    <Compile Include="LeetCode\Question278.cs" />
+    <Compile Include="LeetCode\Question283.cs" />
+    <Compile Include="LeetCode\Question344.cs" />
+    <Compile Include="LeetCode\Question347.cs" />
+    <Compile Include="LeetCode\Question371.cs" />
+    <Compile Include="LeetCode\Question412.cs" />
+    <Compile Include="LeetCode\Question7.cs" />
+    <Compile Include="LeetCode\Question70.cs" />
+    <Compile Include="LeetCode\Question73.cs" />
+    <Compile Include="LeetCode\Question8.cs" />
+    <Compile Include="LeetCode\Question88.cs" />
+    <Compile Include="LeetCode\Question1.cs" />
+    <Compile Include="LeetCode\Question455.cs" />
+    <Compile Include="Thread\AsyncAwaitSample.cs" />
+    <Compile Include="Thread\Interview1.cs" />
+    <Compile Include="Thread\ManipulateThread.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Algorithm\Other\SearchForRollingArray.cs" />
+    <Compile Include="Thread\Multithread.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
