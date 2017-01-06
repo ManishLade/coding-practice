@@ -80,6 +80,7 @@
     <Compile Include="LeetCode\Question344.cs" />
     <Compile Include="LeetCode\Question347.cs" />
     <Compile Include="LeetCode\Question371.cs" />
+    <Compile Include="LeetCode\Question400.cs" />
     <Compile Include="LeetCode\Question412.cs" />
     <Compile Include="LeetCode\Question445.cs" />
     <Compile Include="LeetCode\Question7.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="LeetCode\Question88.cs" />
     <Compile Include="LeetCode\Question1.cs" />
     <Compile Include="LeetCode\Question455.cs" />
+    <Compile Include="LeetCode\SingleNumberIV.cs" />
     <Compile Include="Thread\AsyncAwaitSample.cs" />
     <Compile Include="Thread\Interview1.cs" />
     <Compile Include="Thread\ManipulateThread.cs" />
