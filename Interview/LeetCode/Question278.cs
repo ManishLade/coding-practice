@@ -10,19 +10,16 @@ namespace Interview.LeetCode
     {
         public int FirstBadVersion(int n)
         {
-            if (n == 0)
-                return n;
-
             int start = 1, mid = 0, end = n;
 
             while (start < end)
             {
                 mid = start + (end - start) / 2;
 
-                if (!IsBadVersion(mid))
-                    start = mid + 1;
+                if (IsBadVersion(mid))
+                    end = mid - 1;
                 else
-                    end = mid;
+                    start = mid + 1;
             }
 
             return start;

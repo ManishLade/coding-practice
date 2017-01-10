@@ -11,7 +11,7 @@ namespace Interview.LeetCode
     {
         public static void EntryPoint()
         {
-            Console.WriteLine((new Question400()).FindNthDigit(105));
+            Console.WriteLine((new Question400()).FindNthDigit(11));
         }
 
         public int FindNthDigit(int n)
@@ -19,11 +19,11 @@ namespace Interview.LeetCode
             if (n <= 9)
                 return n;
 
-            int start = 1, count = 9, length = 1, num = 0;
+            long start = 1, count = 9, length = 1, num = 0;
 
             while (n > count * length)
             {
-                n -= count * length;
+                n -= (int)(count * length);
                 start *= 10;
                 count *= 10;
                 length += 1;
@@ -31,7 +31,10 @@ namespace Interview.LeetCode
 
             num = n / length + start;
 
-            return Convert.ToInt32(num.ToString().ToCharArray()[n % length - 1] - '0');
+            if (n % length == 0)
+                return Convert.ToInt32(num.ToString().ToCharArray()[n % length] - '0');
+            else
+                return Convert.ToInt32(num.ToString().ToCharArray()[n % length - 1] - '0');
         }
     }
 }
