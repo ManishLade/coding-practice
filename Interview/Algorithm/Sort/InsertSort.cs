@@ -8,5 +8,6 @@ namespace Algorithm.Sort
 {
     class InsertSort
     {
+
     }
 }
