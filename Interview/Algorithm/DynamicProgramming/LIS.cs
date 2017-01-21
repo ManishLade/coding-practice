@@ -7,9 +7,10 @@ namespace Interview.Algorithm.Other
     {
         public static void EntryPoint()
         {
-            int[] input = new int[] { 5, 3, 4, 5, 6, 7 };
+            //int[] input = new int[] { 5, 3, 4, 5, 6, 7 };
+            int[] input = new int[] { 0, 1, 2, 0, 1, 2, 3, 4, 0 };
 
-            (new LIS()).LengthOfLIS(input);
+            (new LIS()).GetLISLengthByDP(input);
         }
 
         private int LengthOfLIS(int[] input)
@@ -39,6 +40,29 @@ namespace Interview.Algorithm.Other
             }
 
             return length;
+        }
+
+        private int GetLISLengthByDP(int[] LIS)
+        {
+            if (LIS == null)
+                return 0;
+            if (LIS.Length == 1)
+                return 1;
+
+            int currentLength = 0, continousLength = 1;
+
+            for (int i = 0; i <= LIS.Length - 2; i++)
+            {
+                if (LIS[i] < LIS[i + 1])
+                    continousLength++;
+                else
+                    continousLength = 1;
+
+                if (currentLength < continousLength)
+                    currentLength = continousLength;
+            }
+
+            return currentLength;
         }
 
         private void LIS2()

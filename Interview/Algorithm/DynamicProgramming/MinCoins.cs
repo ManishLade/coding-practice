@@ -2,6 +2,7 @@
 
 namespace Interview.Algorithm.DynamicProgramming
 {
+    // Refer: http://www.hawstein.com/posts/dp-novice-to-advanced.html
     class MinCoins
     {
         public static void EntryPoint()

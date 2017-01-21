@@ -41,19 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\DynamicProgramming\LCS.cs" />
     <Compile Include="Algorithm\DynamicProgramming\MinCoins.cs" />
-    <Compile Include="Algorithm\Other\CrossingLists.cs" />
-    <Compile Include="Algorithm\Other\CycleLists.cs" />
     <Compile Include="Algorithm\DynamicProgramming\Factorial.cs" />
     <Compile Include="Algorithm\DynamicProgramming\Fibonacci.cs" />
     <Compile Include="Algorithm\Other\InvertString.cs" />
     <Compile Include="Algorithm\Other\KMP.cs" />
     <Compile Include="Algorithm\Other\Knapsack.cs" />
-    <Compile Include="Algorithm\Other\LCS.cs" />
     <Compile Include="Algorithm\DynamicProgramming\LIS.cs" />
-    <Compile Include="Algorithm\Other\MAXSubarray.cs" />
     <Compile Include="Algorithm\Other\Mazes.cs" />
-    <Compile Include="Algorithm\Other\MergeSortedLinkedLists.cs" />
     <Compile Include="Algorithm\Other\Wave.cs" />
     <Compile Include="Algorithm\Search\BinarySearch.cs" />
     <Compile Include="Algorithm\Sort\HeapSort.cs" />
@@ -75,6 +71,7 @@
     <Compile Include="LeetCode\Question139.cs" />
     <Compile Include="LeetCode\Question141.cs" />
     <Compile Include="LeetCode\Question142.cs" />
+    <Compile Include="LeetCode\Question153.cs" />
     <Compile Include="LeetCode\Question155.cs" />
     <Compile Include="LeetCode\Question160.cs" />
     <Compile Include="LeetCode\Question18.cs" />
@@ -117,7 +114,6 @@
     <Compile Include="Thread\ManipulateThread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Algorithm\Other\SearchForRollingArray.cs" />
     <Compile Include="Thread\Multithread.cs" />
   </ItemGroup>
   <ItemGroup>

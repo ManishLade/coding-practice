@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interview.Algorithm.Other
+namespace Interview.Algorithm.DynamicProgramming
 {
-    class CycleLists
+    // *L*ongest *C*ommon *S*ubsequence
+    class LCS
     {
     }
 }
