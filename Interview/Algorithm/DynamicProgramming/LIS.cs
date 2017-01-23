@@ -8,58 +8,30 @@ namespace Interview.Algorithm.Other
         public static void EntryPoint()
         {
             //int[] input = new int[] { 5, 3, 4, 5, 6, 7 };
-            int[] input = new int[] { 0, 1, 2, 0, 1, 2, 3, 4, 0 };
+            int[] input = new int[] { 10, 9, 2, 5, 3, 7, 101, 18 };
 
-            (new LIS()).GetLISLengthByDP(input);
+            (new LIS()).GetLISLength(input);
         }
 
-        private int LengthOfLIS(int[] input)
+        private int GetLISLength(int[] input)
         {
-            if (input == null)
+            if (input == null || input.Length == 0)
                 return 0;
             else if (input.Length == 1)
                 return 1;
 
-            int length = 0;
-            int[] sequence = new int[input.Length];
-            sequence[0] = 1;
+            int currentLength = 1;
+            int[] continousLength = new int[input.Length];
 
-            for (int i = 1; i < input.Length; i++)
+            for (int i = 0; i <= input.Length - 1; i++)
             {
+                continousLength[i] = 1;
+
                 for (int j = 0; j < i; j++)
-                {
-                    if (input[j] <= input[i])
-                    {
-                        sequence[i] = sequence[j] + 1;
-                        if (length < sequence[i])
-                            length = sequence[i];
-                    }
-                    else
-                        sequence[i] = 1;
-                }
-            }
+                    if (input[j] < input[i])
+                        continousLength[i] = Math.Max(continousLength[j] + 1, continousLength[i]);
 
-            return length;
-        }
-
-        private int GetLISLengthByDP(int[] LIS)
-        {
-            if (LIS == null)
-                return 0;
-            if (LIS.Length == 1)
-                return 1;
-
-            int currentLength = 0, continousLength = 1;
-
-            for (int i = 0; i <= LIS.Length - 2; i++)
-            {
-                if (LIS[i] < LIS[i + 1])
-                    continousLength++;
-                else
-                    continousLength = 1;
-
-                if (currentLength < continousLength)
-                    currentLength = continousLength;
+                currentLength = Math.Max(continousLength[i], currentLength);
             }
 
             return currentLength;
