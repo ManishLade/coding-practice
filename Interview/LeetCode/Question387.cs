@@ -16,15 +16,15 @@ namespace Interview.LeetCode
 
         public int FirstUniqChar(string s)
         {
-            Hashtable hash = new Hashtable();
+            Dictionary<char, int[]> dictionary = new Dictionary<char, int[]>();
 
             for (int i = 0; i <= s.Length - 1; i++)
-                if (hash.ContainsKey(s[i]))
-                    ((int[])hash[s[i]])[0]++;
+                if (dictionary.ContainsKey(s[i]))
+                    ((int[])dictionary[s[i]])[0]++;
                 else
-                    hash.Add(s[i], new int[] { 1, i });
+                    dictionary.Add(s[i], new int[] { 1, i });
 
-            foreach (var item in hash.Values)
+            foreach (var item in dictionary.Values)
                 if (((int[])item)[0] == 1)
                     return ((int[])item)[1];
 
