@@ -1,8 +1,0 @@
-version: '2.1'
-
-services:
-  interview:
-    image: interview
-    build:
-      context: .\Interview
-      dockerfile: Dockerfile
