@@ -18,11 +18,23 @@ namespace Interview.LeetCode
             array[2] = 2;
 
             for (int i = 3; i <= n; i++)
-            {
                 array[i] = array[i - 1] + array[i - 2];
-            }
 
             return array[n];
+        }
+
+        public int ClimbStairs2(int n)
+        {
+            int[] a = { 1, 2, 0 };
+            int i = 2;
+
+            while (i < n)
+            {
+                a[i % 3] = a[(i + 1) % 3] + a[(i + 2) % 3];
+                i++;
+            }
+
+            return a[(n - 1) % 3];
         }
     }
 }
