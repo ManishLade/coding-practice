@@ -131,11 +131,13 @@
     <Compile Include="LeetCode\Question73.cs" />
     <Compile Include="LeetCode\Question79.cs" />
     <Compile Include="LeetCode\Question8.cs" />
+    <Compile Include="LeetCode\Question86.cs" />
     <Compile Include="LeetCode\Question88.cs" />
     <Compile Include="LeetCode\Question1.cs" />
     <Compile Include="LeetCode\Question455.cs" />
     <Compile Include="LeetCode\Question146.cs" />
     <Compile Include="LeetCode\Question91.cs" />
+    <Compile Include="LeetCode\Question92.cs" />
     <Compile Include="Thread\AsyncAwaitSample.cs" />
     <Compile Include="Thread\Interview1.cs" />
     <Compile Include="Thread\ManipulateThread.cs" />
