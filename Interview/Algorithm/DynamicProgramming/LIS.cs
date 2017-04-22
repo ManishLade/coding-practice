@@ -13,6 +13,7 @@ namespace Interview.Algorithm.Other
             (new LIS()).GetLISLength(input);
         }
 
+        // O (n^2)
         private int GetLISLength(int[] input)
         {
             if (input == null || input.Length == 0)
@@ -37,6 +38,7 @@ namespace Interview.Algorithm.Other
             return currentLength;
         }
 
+        // O (nlgn)
         private void LIS2()
         {
             int LISLength = 0;
