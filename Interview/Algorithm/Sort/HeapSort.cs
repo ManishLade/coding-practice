@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Algorithm.Sort
+namespace Interview.Algorithm.Sort
 {
     class HeapSortTest
     {

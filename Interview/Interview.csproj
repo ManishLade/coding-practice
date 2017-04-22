@@ -47,7 +47,7 @@
     <Compile Include="Algorithm\DynamicProgramming\Fibonacci.cs" />
     <Compile Include="Algorithm\Other\InvertString.cs" />
     <Compile Include="Algorithm\Other\KMP.cs" />
-    <Compile Include="Algorithm\Other\Knapsack.cs" />
+    <Compile Include="Algorithm\DynamicProgramming\Knapsack.cs" />
     <Compile Include="Algorithm\DynamicProgramming\LIS.cs" />
     <Compile Include="Algorithm\Other\Mazes.cs" />
     <Compile Include="Algorithm\Other\Wave.cs" />

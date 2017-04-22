@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algorithm.Other
+namespace Interview.Algorithm.Other
 {
     class Wave
     {

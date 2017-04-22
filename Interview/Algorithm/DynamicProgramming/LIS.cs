@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interview.Algorithm.Other
+namespace Interview.Algorithm.DynamicProgramming
 {
     // *L*ongest *I*ncreasing *S*ubsequence
     class LIS

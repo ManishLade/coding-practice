@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algorithm.Sort
+namespace Interview.Algorithm.Sort
 {
     class QuickSort
     {

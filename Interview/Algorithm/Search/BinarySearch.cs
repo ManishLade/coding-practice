@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algorithm.Search
+namespace Interview.Algorithm.Search
 {
     class BinarySearch
     {

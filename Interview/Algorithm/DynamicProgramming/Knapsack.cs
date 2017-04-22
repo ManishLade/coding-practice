@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Algorithm.Other
+namespace Interview.Algorithm.DynamicProgramming
 {
     class KnapsackTest
     {
