@@ -8,11 +8,6 @@ namespace Interview.LeetCode
 {
     class Question260
     {
-        public static void EntryPoint()
-        {
-
-        }
-
         public int[] SingleNumber(int[] nums)
         {
             int a = 0, b = 0;

@@ -9,11 +9,6 @@ namespace Interview.LeetCode
 {
     class Question21
     {
-        public static void EntryPoint()
-        {
-
-        }
-
         public Node MergeTwoLists(Node l1, Node l2)
         {
             Node dummyNode = new Node(-1);

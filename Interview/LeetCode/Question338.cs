@@ -8,11 +8,6 @@ namespace Interview.LeetCode
 {
     class Question338
     {
-        public static void EntryPoint()
-        {
-
-        }
-
         public int[] CountBits(int num)
         {
             int[] result = new int[num + 1];

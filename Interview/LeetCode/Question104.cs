@@ -9,11 +9,6 @@ namespace Interview.LeetCode
 {
     class Question104
     {
-        public static void EntryPoint()
-        {
-
-        }
-
         public int MaxDepth(BinaryTree.Node root)
         {
             if (root == null)
