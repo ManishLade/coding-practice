@@ -8,11 +8,18 @@ namespace Interview.LeetCode
 {
     class Question79
     {
+        public static void EntryPoint()
+        {
+            char[,] board = new char[,] { { 'a', 'b' } };
+            (new Question79()).Exist(board, "ba");
+        }
+
         public bool Exist(char[,] board, string word)
         {
             for (int i = 0; i <= board.GetLength(0) - 1; i++)
                 for (int j = 0; j <= board.GetLength(1) - 1; j++)
-                    return (DFS(board, 0, 0, word, 0));
+                    if (DFS(board, i, j, word, 0))
+                        return true;
 
             return false;
         }
