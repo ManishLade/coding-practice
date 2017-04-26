@@ -54,6 +54,7 @@
     <Compile Include="Algorithm\Search\BinarySearch.cs" />
     <Compile Include="Algorithm\Sort\HeapSort.cs" />
     <Compile Include="Algorithm\Sort\InsertSort.cs" />
+    <Compile Include="Algorithm\Sort\MergeSort.cs" />
     <Compile Include="Algorithm\Sort\QuickSort.cs" />
     <Compile Include="CareerCup\Question1.cs" />
     <Compile Include="CC150\CCQuestion182.cs" />
@@ -130,7 +131,9 @@
     <Compile Include="LeetCode\Question55.cs" />
     <Compile Include="LeetCode\Question551.cs" />
     <Compile Include="LeetCode\Question57.cs" />
+    <Compile Include="LeetCode\Question58.cs" />
     <Compile Include="LeetCode\Question61.cs" />
+    <Compile Include="LeetCode\Question62.cs" />
     <Compile Include="LeetCode\Question67.cs" />
     <Compile Include="LeetCode\Question7.cs" />
     <Compile Include="LeetCode\Question70.cs" />
