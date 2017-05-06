@@ -1,1 +1,1 @@
-This repository contains all kinds of interview questions & Leetcode solutions.
+Practice makes you better.
