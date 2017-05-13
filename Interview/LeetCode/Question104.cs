@@ -14,10 +14,7 @@ namespace Interview.LeetCode
             if (root == null)
                 return 0;
 
-            int leftMax = MaxDepth(root.LeftNode);
-            int rightMax = MaxDepth(root.RightNode);
-
-            return leftMax >= rightMax ? leftMax + 1 : rightMax + 1;
+            return Math.Max(MaxDepth(root.LeftNode), MaxDepth(root.RightNode)) + 1;
         }
     }
 }
