@@ -15,32 +15,35 @@ namespace Interview.LeetCode
 
         public string CountAndSay(int n)
         {
-            int index = 1, resultIndex = 1, count = 1;
-            string result = "1", tempResult = string.Empty;
-            char currentCharacter = result[0];
+            if (n == 1)
+                return "1";
 
-            while (index < n)
+            string result = "1", tempResult = string.Empty;
+            int index = 1, count = 1;
+            char currentChar = result[0];
+
+            for (int i = 2; i <= n; i++)
             {
-                while (resultIndex <= result.Length - 1)
+                while (index <= result.Length - 1)
                 {
-                    if (currentCharacter == result[resultIndex])
+                    if (currentChar == result[index])
                         count++;
                     else
                     {
-                        tempResult += count.ToString() + currentCharacter;
-                        currentCharacter = result[resultIndex];
+                        tempResult += count.ToString() + currentChar;
+                        currentChar = result[index];
                         count = 1;
                     }
 
-                    resultIndex++;
+                    index++;
                 }
 
-                tempResult += count.ToString() + currentCharacter;
-                result = tempResult;
+                result = tempResult + count.ToString() + currentChar;
+
+                count = 1;
+                index = 1;
                 tempResult = string.Empty;
-                currentCharacter = result[0];
-                resultIndex = 1;
-                index++;
+                currentChar = result[0];
             }
 
             return result;

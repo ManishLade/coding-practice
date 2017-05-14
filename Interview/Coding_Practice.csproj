@@ -109,6 +109,7 @@
     <Compile Include="LeetCode\Question237.cs" />
     <Compile Include="LeetCode\Question24.cs" />
     <Compile Include="LeetCode\Question240.cs" />
+    <Compile Include="LeetCode\Question242.cs" />
     <Compile Include="LeetCode\Question258.cs" />
     <Compile Include="LeetCode\Question26.cs" />
     <Compile Include="LeetCode\Question260.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="LeetCode\Question404.cs" />
     <Compile Include="LeetCode\Question412.cs" />
     <Compile Include="LeetCode\Question434.cs" />
+    <Compile Include="LeetCode\Question438.cs" />
     <Compile Include="LeetCode\Question445.cs" />
     <Compile Include="LeetCode\Question46.cs" />
     <Compile Include="LeetCode\Question476.cs" />
@@ -172,6 +174,7 @@
     <Compile Include="LeetCode\Question35.cs" />
     <Compile Include="LeetCode\Question98.cs" />
     <Compile Include="LeetCode\Question560.cs" />
+    <Compile Include="LeetCode\Questoin242.cs" />
     <Compile Include="Thread\AsyncAwaitSample.cs" />
     <Compile Include="Thread\Interview1.cs" />
     <Compile Include="Thread\ManipulateThread.cs" />
