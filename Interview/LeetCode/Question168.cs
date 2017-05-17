@@ -21,8 +21,9 @@ namespace Interview.LeetCode
 
             while (temp != 0)
             {
-                tempResult.Append((char)(temp % 27 + 64));
-                temp /= 27;
+                temp--;
+                tempResult.Append((char)(temp % 26 + 65));
+                temp /= 26;
             }
 
             result = tempResult.ToString().ToCharArray();
