@@ -45,15 +45,12 @@ namespace Interview.LeetCode
                         temp += baseString;
 
                     if (stack.Count == 0)
-                    {
                         result += temp;
-                        baseString = string.Empty;
-                    }
                     else
-                    {
-                        baseString = temp;
-                    }
+                        foreach (var itemInTemp in temp)
+                            stack.Push(itemInTemp);
 
+                    baseString = string.Empty;
                     temp = string.Empty;
                     repeatCount = 0;
                     digit = 0;
