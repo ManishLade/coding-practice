@@ -10,16 +10,18 @@ namespace Interview.LeetCode
     {
         public static void EntryPoint()
         {
-            (new Question394()).DecodeString("3[a]2[bc]");
+            (new Question394()).DecodeString("sd2[f2[e]g]i");
         }
 
         public string DecodeString(string s)
         {
             string result = string.Empty,
                    baseString = string.Empty,
-                   temp = string.Empty;
+                   temp = string.Empty,
+                   tail = string.Empty;
             Stack<char> stack = new Stack<char>();
-            int repeatCount = 0;
+            int repeatCount = 0,
+                digit = 0;
 
             foreach (var item in s)
             {
@@ -37,7 +39,7 @@ namespace Interview.LeetCode
                     stack.Pop();
 
                     while (stack.Count != 0 && stack.Peek() <= 57)
-                        repeatCount = repeatCount * 10 + ((int)stack.Pop() - 48);
+                        repeatCount = ((int)stack.Pop() - 48) * (int)Math.Pow(10, digit++) + repeatCount;
 
                     for (int i = 1; i <= repeatCount; i++)
                         temp += baseString;
@@ -52,11 +54,16 @@ namespace Interview.LeetCode
                         baseString = temp;
                     }
 
+                    temp = string.Empty;
                     repeatCount = 0;
+                    digit = 0;
                 }
             }
 
-            return result;
+            while (stack.Count != 0)
+                tail = stack.Pop().ToString() + tail;
+
+            return result + tail;
         }
     }
 }
