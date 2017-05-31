@@ -22,4 +22,5 @@ namespace Interview.LeetCode
 
             return result;
         }
+    }
 }
