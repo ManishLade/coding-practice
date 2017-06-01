@@ -37,22 +37,37 @@ namespace Interview.LeetCode
 
         public int MinimumTotal(List<List<int>> triangle)
         {
-            if (triangle == null || triangle.Count == 0)
-                return -1;
+            if (triangle == null)
+                return 0;
+            else if (triangle[0] == null)
+                return 0;
+            else if (triangle.Count == 1)
+                return triangle[0][0];
 
-            int[] results = new int[triangle.Count];
-            results[0] = triangle[0][0];
+            List<List<int>> temp = new List<List<int>>();
+            int min = int.MaxValue;
+
+            temp.Add(new List<int>());
+            temp[0].Add(triangle[0][0]);
 
             for (int i = 1; i <= triangle.Count - 1; i++)
             {
-                results[i] = int.MaxValue;
+                temp.Add(new List<int>());
 
-                for (int j = 0; j < triangle[i].Count - 1; j++)
-                    if (results[i - 1] + triangle[i][j] < results[i])
-                        results[i] = results[i - 1] + triangle[i][j];
+                temp[i].Add(temp[i - 1][0] + triangle[i][0]);
+
+                if (triangle.Count > 2)
+                    for (int j = 1; j <= triangle[i].Count - 2; j++)
+                        temp[i].Add(Math.Min(temp[i - 1][j - 1] + triangle[i][j],
+                                             temp[i - 1][j] + triangle[i][j]));
+
+                temp[i].Add(temp[i - 1][temp[i - 1].Count - 1] + triangle[i][triangle[i].Count - 1]);
             }
 
-            return results[triangle.Count - 1];
+            foreach (var item in temp[temp.Count - 1])
+                min = Math.Min(min, item);
+
+            return min;
         }
     }
 }
