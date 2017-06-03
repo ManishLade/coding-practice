@@ -9,33 +9,56 @@ namespace Interview.LeetCode
 {
     class Question61
     {
+        public static void EntryPoint()
+        {
+            Node node1 = new Node(1);
+            Node node2 = new Node(2);
+            Node node3 = new Node(3);
+            node1.NextNode = node2;
+            node2.NextNode = node3;
+
+            (new Question61()).RotateRight(node1, 2000000000);
+        }
+
         public Node RotateRight(Node head, int k)
         {
-            if (head == null)
-                return null;
-            else if (k == 0)
+            Node newHead = null,
+                 fastNode = head,
+                 slowNode = head,
+                 lastNode = head;
+            int counter = 1,
+                length = 1,
+                index = k;
+
+            while (lastNode != null && lastNode.NextNode != null)
+            {
+                length++;
+                lastNode = lastNode.NextNode;
+            }
+            index = k % length;
+
+            if (k == 0 || head == null || head.NextNode == null)
                 return head;
 
-            Node newHeader = null, tempNode1 = head, tempNode2 = head;
-            int index = 1;
+            index++;
 
-            while (index++ <= k + 1)
-                if (tempNode2 != null)
-                    tempNode2 = tempNode2.NextNode;
-                else
-                    return head;
-
-            while (tempNode2.NextNode != null)
+            while (counter <= index)
             {
-                tempNode1 = tempNode1.NextNode;
-                tempNode2 = tempNode2.NextNode;
+                fastNode = fastNode.NextNode;
+                counter++;
             }
 
-            newHeader = tempNode1.NextNode;
-            tempNode1.NextNode = null;
-            tempNode2.NextNode = head;
+            while (fastNode != null)
+            {
+                slowNode = slowNode.NextNode;
+                fastNode = fastNode.NextNode;
+            }
 
-            return newHeader;
+            newHead = slowNode.NextNode;
+            slowNode.NextNode = null;
+            lastNode.NextNode = head;
+
+            return newHead;
         }
     }
 }
