@@ -7,7 +7,7 @@ using Interview.Data_Structure;
 
 namespace Interview.LeetCode
 {
-    class Questoin111
+    class Question111
     {
         public int MinDepth(BinaryTree.Node root)
         {
