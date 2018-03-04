@@ -24,6 +24,8 @@ namespace Interview.Data_Structure
         }
     }
 
+    // Reference:
+    // https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs
     class Graph
     {
         int[,] vertices = null;

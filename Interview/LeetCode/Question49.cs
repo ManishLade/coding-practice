@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
@@ -22,31 +20,30 @@ namespace Interview.LeetCode
                 return null;
 
             List<IList<string>> result = new List<IList<string>>();
-            List<string> temp = new List<string>();
+            List<string> temp = null;
             Hashtable dictionary = new Hashtable();
             int currentIndex = 0;
 
             if (strs.Length == 1)
             {
+                temp = new List<string>();
                 temp.Add(strs[0]);
-
                 result.Add(temp);
+
+                return result;
             }
-            else
+
+            foreach (var item in strs)
             {
-                foreach (var item in strs)
+                if (dictionary.Contains(SortString(item)))
+                    result[(int)dictionary[SortString(item)]].Add(item);
+                else
                 {
-                    if (dictionary.Contains(SortString(item)))
-                        result[(int)dictionary[SortString(item)]].Add(item);
-                    else
-                    {
-                        dictionary.Add(SortString(item), currentIndex++);
+                    dictionary.Add(SortString(item), currentIndex++);
 
-                        temp = new List<string>();
-                        temp.Add(item);
-
-                        result.Add(temp);
-                    }
+                    temp = new List<string>();
+                    temp.Add(item);
+                    result.Add(temp);
                 }
             }
 
@@ -55,10 +52,10 @@ namespace Interview.LeetCode
 
         public static string SortString(string input)
         {
-            char[] characters = input.ToArray();
-            Array.Sort(characters);
+            char[] output = input.ToArray();
+            Array.Sort(output);
 
-            return new string(characters);
+            return new string(output);
         }
     }
 }
