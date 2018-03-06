@@ -63,6 +63,7 @@
     <Compile Include="Data_Structure\Graph.cs" />
     <Compile Include="Data_Structure\LinkedList.cs" />
     <Compile Include="Data_Structure\PriorityQueue.cs" />
+    <Compile Include="LeetCode\Data_Structure.cs" />
     <Compile Include="LeetCode\Question100.cs" />
     <Compile Include="LeetCode\Question101.cs" />
     <Compile Include="LeetCode\Question102.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="LeetCode\Question44.cs" />
     <Compile Include="LeetCode\Question445.cs" />
     <Compile Include="LeetCode\Question46.cs" />
+    <Compile Include="LeetCode\Question463.cs" />
     <Compile Include="LeetCode\Question476.cs" />
     <Compile Include="LeetCode\Question48.cs" />
     <Compile Include="LeetCode\Question49.cs" />
@@ -185,6 +187,7 @@
     <Compile Include="LeetCode\Question6.cs" />
     <Compile Include="LeetCode\Question606.cs" />
     <Compile Include="LeetCode\Question61.cs" />
+    <Compile Include="LeetCode\Question617.cs" />
     <Compile Include="LeetCode\Question62.cs" />
     <Compile Include="LeetCode\Question66.cs" />
     <Compile Include="LeetCode\Question67.cs" />
