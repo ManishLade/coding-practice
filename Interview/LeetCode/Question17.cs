@@ -43,12 +43,12 @@ namespace Interview.LeetCode
                     graph[i][j] = temp[j];
             }
 
-            BFS(graph, 0, string.Empty, result);
+            DFS(graph, 0, string.Empty, result);
 
             return result;
         }
 
-        public void BFS(char[][] graph, int currentLayer, string previousCombination, List<string> result)
+        public void DFS(char[][] graph, int currentLayer, string previousCombination, List<string> result)
         {
             string currentCombination = string.Empty;
 
@@ -62,7 +62,7 @@ namespace Interview.LeetCode
             {
                 currentCombination = previousCombination;
 
-                BFS(graph, currentLayer + 1, currentCombination += item, result);
+                DFS(graph, currentLayer + 1, currentCombination += item, result);
             }
         }
     }
