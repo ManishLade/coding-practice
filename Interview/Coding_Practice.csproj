@@ -153,9 +153,11 @@
     <Compile Include="LeetCode\Question328.cs" />
     <Compile Include="LeetCode\Question33.cs" />
     <Compile Include="LeetCode\Question332.cs" />
+    <Compile Include="LeetCode\Question337.cs" />
     <Compile Include="LeetCode\Question338.cs" />
     <Compile Include="LeetCode\Question339.cs" />
     <Compile Include="LeetCode\Question34.cs" />
+    <Compile Include="LeetCode\Question341.cs" />
     <Compile Include="LeetCode\Question344.cs" />
     <Compile Include="LeetCode\Question347.cs" />
     <Compile Include="LeetCode\Question366.cs" />
