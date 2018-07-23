@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question516
     {
+        public static void EntryPoint()
+        {
+
+        }
     }
 }
