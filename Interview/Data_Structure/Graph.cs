@@ -66,6 +66,11 @@ namespace Interview.Data_Structure
 
         }
 
+        public bool HasCycle()
+        {
+            return false;
+        }
+
         public int GetAdjacencyVertice(int currentVertice)
         {
             for (int i = 0; i <= vertices.GetLength(1) - 1; i++)
