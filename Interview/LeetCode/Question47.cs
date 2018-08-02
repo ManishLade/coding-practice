@@ -16,35 +16,28 @@ namespace Interview.LeetCode
         public IList<IList<int>> PermuteUnique(int[] nums)
         {
             List<IList<int>> result = new List<IList<int>>();
-            List<int> currentCombination = null;
 
             for (int i = 0; i < nums.Length; i++)
-            {
-                currentCombination = new List<int>();
-
-                for (int j = i; j < nums.Length; j++)
-                    currentCombination.Add(nums[j]);
-
-                for (int j = 0; j < i; j++)
-                    currentCombination.Add(nums[j]);
-
-                result.Add(currentCombination);
-
-                if (i != 0 && i != nums.Length - 1 && nums[i] != nums[i - 1] && nums[i] != nums[i + 1])
-                {
-                    currentCombination = new List<int>();
-
-                    for (int j = i; j >= 0; j--)
-                        currentCombination.Add(nums[j]);
-
-                    for (int j = nums.Length - 1; j > i; j--)
-                        currentCombination.Add(nums[j]);
-
-                    result.Add(currentCombination);
-                }
-            }
+                Backtrack(nums, i, new List<int>(), result);
 
             return result;
+        }
+
+        private void Backtrack(int[] nums, int currentIndex, List<int> currentCombination, List<IList<int>> result)
+        {
+            List<int> tempList = new List<int>(currentCombination);
+
+            tempList.Add(nums[currentIndex]);
+
+            if (tempList.Count == nums.Length)
+            {
+                result.Add(tempList);
+                return;
+            }
+
+            for (int i = 0; i < nums.Length; i++)
+                if (i != currentIndex && !tempList.Contains(nums[i]))
+                    Backtrack(nums, i, tempList, result);
         }
     }
 }

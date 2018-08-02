@@ -36,7 +36,7 @@ namespace Interview.LeetCode
             }
 
             for (int i = 0; i < nums.Length; i++)
-                if (i != currentIndex && !tempList.Contains(nums[i]))
+                if (!tempList.Contains(nums[i]))
                     Backtrack(nums, i, tempList, result);
         }
 
