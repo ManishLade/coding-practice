@@ -13,33 +13,60 @@ namespace Interview.LeetCode
             (new Question46()).Permute(new int[] { 1, 2, 3 });
         }
 
-        IList<IList<int>> Permutes = new List<IList<int>>();
-
         public IList<IList<int>> Permute(int[] nums)
         {
-            GetPermute(new List<int>(), nums);
+            List<IList<int>> result = new List<IList<int>>();
 
-            return Permutes;
+            for (int i = 0; i < nums.Length; i++)
+                Backtrack(nums, i, new List<int>(), result);
+
+            return result;
         }
 
-        private void GetPermute(List<int> list, int[] nums)
+        private void Backtrack(int[] nums, int currentIndex, List<int> currentCombination, List<IList<int>> result)
         {
-            List<int> tempList = null;
+            List<int> tempList = new List<int>(currentCombination);
 
-            if (list.Count != nums.Length)
+            tempList.Add(nums[currentIndex]);
+
+            if (tempList.Count == nums.Length)
             {
-                for (int i = 0; i <= nums.Length - 1; i++)
-                {
-                    if (!list.Contains(nums[i]))
-                    {
-                        tempList = new List<int>(list);
-                        tempList.Add(nums[i]);
-                        GetPermute(tempList, nums);
-                    }
-                }
+                result.Add(tempList);
+                return;
             }
-            else
-                Permutes.Add(list);
+
+            for (int i = 0; i < nums.Length; i++)
+                if (i != currentIndex && !tempList.Contains(nums[i]))
+                    Backtrack(nums, i, tempList, result);
         }
+
+        //IList<IList<int>> Permutes = new List<IList<int>>();
+
+        //public IList<IList<int>> Permute(int[] nums)
+        //{
+        //    GetPermute(new List<int>(), nums);
+
+        //    return Permutes;
+        //}
+
+        //private void GetPermute(List<int> list, int[] nums)
+        //{
+        //    List<int> tempList = null;
+
+        //    if (list.Count != nums.Length)
+        //    {
+        //        for (int i = 0; i <= nums.Length - 1; i++)
+        //        {
+        //            if (!list.Contains(nums[i]))
+        //            {
+        //                tempList = new List<int>(list);
+        //                tempList.Add(nums[i]);
+        //                GetPermute(tempList, nums);
+        //            }
+        //        }
+        //    }
+        //    else
+        //        Permutes.Add(list);
+        //}
     }
 }
