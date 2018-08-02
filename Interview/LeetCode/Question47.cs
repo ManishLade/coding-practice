@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,34 +11,42 @@ namespace Interview.LeetCode
     {
         public static void EntryPoint()
         {
-            (new Question47()).PermuteUnique(new int[] { 1, 2, 3 });
+            (new Question47()).PermuteUnique(new int[] { 1, 1, 0, 0, 1, -1, -1, 1 });
         }
 
         public IList<IList<int>> PermuteUnique(int[] nums)
         {
             List<IList<int>> result = new List<IList<int>>();
+            bool[] used = new bool[nums.Length];
 
-            for (int i = 0; i < nums.Length; i++)
-                Backtrack(nums, i, new List<int>(), result);
+            Array.Sort(nums);
+
+            Backtrack(nums, used, new List<int>(), result);
 
             return result;
         }
 
-        private void Backtrack(int[] nums, int currentIndex, List<int> currentCombination, List<IList<int>> result)
+        private void Backtrack(int[] nums, bool[] used, List<int> currentCombination, List<IList<int>> result)
         {
-            List<int> tempList = new List<int>(currentCombination);
-
-            tempList.Add(nums[currentIndex]);
-
-            if (tempList.Count == nums.Length)
+            if (currentCombination.Count == nums.Length)
             {
-                result.Add(tempList);
+                result.Add(new List<int>(currentCombination));
                 return;
             }
 
             for (int i = 0; i < nums.Length; i++)
-                if (i != currentIndex && !tempList.Contains(nums[i]))
-                    Backtrack(nums, i, tempList, result);
+                if (used[i])
+                    continue;
+                else if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1])
+                    continue;
+                else
+                {
+                    currentCombination.Add(nums[i]);
+                    used[i] = true;
+                    Backtrack(nums, used, currentCombination, result);
+                    currentCombination.RemoveAt(currentCombination.Count - 1);
+                    used[i] = false;
+                }
         }
     }
 }
