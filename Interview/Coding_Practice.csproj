@@ -56,9 +56,6 @@
     <Compile Include="Algorithm\Sort\InsertSort.cs" />
     <Compile Include="Algorithm\Sort\MergeSort.cs" />
     <Compile Include="Algorithm\Sort\QuickSort.cs" />
-    <Compile Include="CareerCup\Question1.cs" />
-    <Compile Include="CC150\CCQuestion182.cs" />
-    <Compile Include="CC150\CCQuestion917.cs" />
     <Compile Include="Data_Structure\BinaryTree.cs" />
     <Compile Include="Data_Structure\Graph.cs" />
     <Compile Include="Data_Structure\LinkedList.cs" />
@@ -266,12 +263,12 @@
     <Compile Include="LeetCode\Question64.cs" />
     <Compile Include="LeetCode\Question645.cs" />
     <Compile Include="LeetCode\Question819.cs" />
-    <Compile Include="Thread\AsyncAwaitSample.cs" />
-    <Compile Include="Thread\Interview1.cs" />
-    <Compile Include="Thread\ManipulateThread.cs" />
+    <Compile Include="Multithreading\AsyncAwaitSample.cs" />
+    <Compile Include="Multithreading\Interview1.cs" />
+    <Compile Include="Multithreading\ManipulateThread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Thread\Multithread.cs" />
+    <Compile Include="Multithreading\Multithread.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
