@@ -41,21 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithm\DynamicProgramming\LCS.cs" />
-    <Compile Include="Algorithm\DynamicProgramming\MinCoins.cs" />
-    <Compile Include="Algorithm\DynamicProgramming\Factorial.cs" />
-    <Compile Include="Algorithm\DynamicProgramming\Fibonacci.cs" />
-    <Compile Include="Algorithm\Other\InvertString.cs" />
-    <Compile Include="Algorithm\Other\KMP.cs" />
-    <Compile Include="Algorithm\DynamicProgramming\Knapsack.cs" />
-    <Compile Include="Algorithm\DynamicProgramming\LIS.cs" />
-    <Compile Include="Algorithm\Other\Mazes.cs" />
-    <Compile Include="Algorithm\Other\Wave.cs" />
-    <Compile Include="Algorithm\Search\BinarySearch.cs" />
-    <Compile Include="Algorithm\Sort\HeapSort.cs" />
-    <Compile Include="Algorithm\Sort\InsertSort.cs" />
-    <Compile Include="Algorithm\Sort\MergeSort.cs" />
-    <Compile Include="Algorithm\Sort\QuickSort.cs" />
+    <Compile Include="Basic_Algorithm\DynamicProgramming\LCS.cs" />
+    <Compile Include="Basic_Algorithm\DynamicProgramming\MinCoins.cs" />
+    <Compile Include="Basic_Algorithm\DynamicProgramming\Factorial.cs" />
+    <Compile Include="Basic_Algorithm\DynamicProgramming\Fibonacci.cs" />
+    <Compile Include="Basic_Algorithm\Other\InvertString.cs" />
+    <Compile Include="Basic_Algorithm\Other\KMP.cs" />
+    <Compile Include="Basic_Algorithm\DynamicProgramming\Knapsack.cs" />
+    <Compile Include="Basic_Algorithm\DynamicProgramming\LIS.cs" />
+    <Compile Include="Basic_Algorithm\Other\Mazes.cs" />
+    <Compile Include="Basic_Algorithm\Other\Wave.cs" />
+    <Compile Include="Basic_Algorithm\Search\BinarySearch.cs" />
+    <Compile Include="Basic_Algorithm\Sort\HeapSort.cs" />
+    <Compile Include="Basic_Algorithm\Sort\InsertSort.cs" />
+    <Compile Include="Basic_Algorithm\Sort\MergeSort.cs" />
+    <Compile Include="Basic_Algorithm\Sort\QuickSort.cs" />
     <Compile Include="Data_Structure\BinaryTree.cs" />
     <Compile Include="Data_Structure\Graph.cs" />
     <Compile Include="Data_Structure\LinkedList.cs" />
