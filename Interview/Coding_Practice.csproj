@@ -274,7 +274,6 @@
     <Compile Include="LeetCode\Question819.cs" />
     <Compile Include="Multithreading\AsyncAwaitSample.cs" />
     <Compile Include="Multithreading\Interview1.cs" />
-    <Compile Include="Multithreading\ManipulateThread.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Multithreading\Multithread.cs" />
