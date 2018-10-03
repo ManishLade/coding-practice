@@ -225,12 +225,14 @@
     <Compile Include="LeetCode\Question63.cs" />
     <Compile Include="LeetCode\Question646.cs" />
     <Compile Include="LeetCode\Question647.cs" />
+    <Compile Include="LeetCode\Question653.cs" />
     <Compile Include="LeetCode\Question657.cs" />
     <Compile Include="LeetCode\Question66.cs" />
     <Compile Include="LeetCode\Question67.cs" />
     <Compile Include="LeetCode\Question681.cs" />
     <Compile Include="LeetCode\Question686.cs" />
     <Compile Include="LeetCode\Question687.cs" />
+    <Compile Include="LeetCode\Question692.cs" />
     <Compile Include="LeetCode\Question694.cs" />
     <Compile Include="LeetCode\Question7.cs" />
     <Compile Include="LeetCode\Question70.cs" />
