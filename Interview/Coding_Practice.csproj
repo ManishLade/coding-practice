@@ -174,6 +174,7 @@
     <Compile Include="LeetCode\Question399.cs" />
     <Compile Include="LeetCode\Question400.cs" />
     <Compile Include="LeetCode\Question404.cs" />
+    <Compile Include="LeetCode\Question406.cs" />
     <Compile Include="LeetCode\Question412.cs" />
     <Compile Include="LeetCode\Question414.cs" />
     <Compile Include="LeetCode\Question419.cs" />
