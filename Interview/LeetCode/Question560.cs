@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,33 +11,28 @@ namespace Interview.LeetCode
     {
         public static void EntryPoint()
         {
-            (new Question560()).SubarraySum(new int[] { 28, 54, 7, -70, 22, 65, -6 }, 100);
+            //(new Question560()).SubarraySum(new int[] { 28, 54, 7, -70, 22, 65, -6 }, 100);
+            (new Question560()).SubarraySum(new int[] { 1, 1, 1 }, 2);
         }
 
         public int SubarraySum(int[] nums, int k)
         {
             int count = 0,
-                tempResult = 0;
+                sum = 0;
+            Hashtable sums = new Hashtable();
 
-            for (int i = 0; i <= nums.Length - 1; i++)
+            sums.Add(0, 1);
+
+            for (int i = 0; i < nums.Length; i++)
             {
-                tempResult = k;
+                sum += nums[i];
+                if (sums.ContainsKey(sum - k))
+                    count += (int)sums[sum - k];
 
-                for (int j = i; j <= nums.Length - 1; j++)
-                {
-                    if (nums[j] > tempResult)
-                        break;
-                    else if (nums[j] < tempResult)
-                    {
-                        tempResult = tempResult - nums[j];
-                        continue;
-                    }
-                    else
-                    {
-                        count++;
-                        break;
-                    }
-                }
+                if (!sums.ContainsKey(sum))
+                    sums.Add(sum, 1);
+                else
+                    sums[sum] = (int)sums[sum] + 1;
             }
 
             return count;
