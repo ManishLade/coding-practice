@@ -32,6 +32,8 @@ namespace Interview.LeetCode
                     else
                         temp[i, j] = 1 + min(temp[i - 1, j - 1], temp[i - 1, j], temp[i, j - 1]);
 
+            printActualEdits(temp, word1.ToCharArray(), word2.ToCharArray());
+
             return temp[word1.Length, word2.Length];
         }
 
@@ -39,6 +41,45 @@ namespace Interview.LeetCode
         {
             int l = Math.Min(a, b);
             return Math.Min(l, c);
+        }
+
+        public void printActualEdits(int[,] T, char[] str1, char[] str2)
+        {
+            int i = T.GetLength(0) - 1;
+            int j = T.GetLength(1) - 1;
+            while (true)
+            {
+                if (i == 0 || j == 0)
+                {
+                    break;
+                }
+                if (str1[i - 1] == str2[j - 1])
+                {
+                    i = i - 1;
+                    j = j - 1;
+                }
+                else if (T[i, j] == T[i - 1, j - 1] + 1)
+                {
+                    Console.WriteLine("Edit " + str2[j - 1] + " in string2 to " + str1[i - 1] + " in string1");
+                    i = i - 1;
+                    j = j - 1;
+                }
+                else if (T[i, j] == T[i - 1, j] + 1)
+                {
+                    Console.WriteLine("Delete in string1 " + str1[i - 1]);
+                    i = i - 1;
+                }
+                else if (T[i, j] == T[i, j - 1] + 1)
+                {
+                    Console.WriteLine("Delete in string2 " + str2[j - 1]);
+                    j = j - 1;
+                }
+                else
+                {
+                    throw new Exception("Some wrong with given data");
+                }
+
+            }
         }
     }
 }

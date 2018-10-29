@@ -15,43 +15,59 @@ namespace Interview.LeetCode
 
         public int StrStr(string haystack, string needle)
         {
-            int index = -1,
-                indexHaystack = 0,
-                indexNeedle = 0;
-            bool resume = false;
+            return KMP(haystack.ToCharArray(), needle.ToCharArray());
+        }
 
-            if (needle != string.Empty && haystack.Length >= needle.Length)
-            {
-                for (int i = 0; i < haystack.Length; i++)
+        private int KMP(char[] text, char[] pattern)
+        {
+            int[] lps = computeTemporaryArray(pattern);
+            int i = 0,
+                j = 0;
+
+            while (i < text.Length && j < pattern.Length)
+                if (text[i] == pattern[j])
                 {
-                    if (haystack[i] == needle[0])
+                    i++;
+                    j++;
+                }
+                else
+                {
+                    if (j != 0)
+                        j = lps[j - 1];
+                    else
+                        i++;
+                }
+
+            if (j == pattern.Length)
+                return i - j;
+
+            return -1;
+        }
+
+        private int[] computeTemporaryArray(char[] pattern)
+        {
+            int[] lps = new int[pattern.Length];
+            int index = 0;
+
+            for (int i = 1; i < pattern.Length;)
+                if (pattern[i] == pattern[index])
+                {
+                    lps[i] = index + 1;
+                    index++;
+                    i++;
+                }
+                else
+                {
+                    if (index != 0)
+                        index = lps[index - 1];
+                    else
                     {
-                        indexHaystack = i;
-                        indexNeedle = 0;
-
-                        while (indexNeedle < needle.Length && indexHaystack < haystack.Length)
-                            if (haystack[indexHaystack++] != needle[indexNeedle++])
-                            {
-                                resume = true;
-                                break;
-                            }
-
-                        if (resume)
-                            resume = false;
-                        else if (indexNeedle == needle.Length)
-                        {
-                            index = i;
-                            break;
-                        }
+                        lps[i] = 0;
+                        i++;
                     }
                 }
-            }
-            else if (haystack.Length < needle.Length)
-                index = -1;
-            else
-                index = 0;
 
-            return index;
+            return lps;
         }
     }
 }
