@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question289
     {
+        public void GameOfLife(int[][] board)
+        {
+
+        }
     }
 }
