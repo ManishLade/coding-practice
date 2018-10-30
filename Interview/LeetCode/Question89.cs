@@ -14,27 +14,29 @@ namespace Interview.LeetCode
             (new Question89()).GrayCode(1);
         }
 
+        // https://leetcode.com/problems/gray-code/discuss/156204/Simple-java-solution-with-comments
         public IList<int> GrayCode(int n)
         {
+            IList<int> result = new List<int>();
+            int index = 1;
+
             if (n == 0)
-                return null;
+                result.Add(0);
+            else
+            {
+                result.Add(0);
+                result.Add(1);                
 
-            byte[] currentCombination = new byte[n];
-            Hashtable hash = new Hashtable();
+                while (index < n)
+                {
+                    for (int i = result.Count() - 1; i >= 0; i--)
+                        result.Add((1 << index) + result[i]);
 
-            DFS(currentCombination, hash);
+                    index++;
+                }
+            }
 
-            return null;
-        }
-
-        public void DFS (byte[] previousCombination, Hashtable hash)
-        {
-            hash.Add(previousCombination.GetHashCode(), previousCombination);
-
-            //for (int i = 0; i < previousCombination.Length; i++)
-            //{
-            //    previousCombination[i] = ~(previousCombination[i]);
-            //}
+            return result;
         }
     }
 }
