@@ -19,3 +19,12 @@ In this repository, you will find:
 
 ## Dynamic Programming
 * Technique
+
+## Disjoint Set
+* Technique
+
+## Segment Tree
+* Technique
+
+## Indexed Binary Search Tree
+* Technique
