@@ -34,4 +34,4 @@ In this repository, you will find:
 
 * Technique
 
-Generally, when the problem is related to sum, get the sum 'prefix' is a common strategy to resolve the problem. 
+  When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem. 
