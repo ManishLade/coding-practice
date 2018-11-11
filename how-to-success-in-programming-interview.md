@@ -28,3 +28,10 @@ In this repository, you will find:
 
 ## Indexed Binary Search Tree
 * Technique
+
+## Special Topics
+1. Sum
+
+* Technique
+
+Generally, when the problem is related to sum, get the sum 'prefix' is a common strategy to resolve the problem. 
