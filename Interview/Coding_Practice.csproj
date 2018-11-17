@@ -98,6 +98,7 @@
     <Compile Include="LeetCode\Question16.cs" />
     <Compile Include="LeetCode\Question160.cs" />
     <Compile Include="LeetCode\Question162.cs" />
+    <Compile Include="LeetCode\Question163.cs" />
     <Compile Include="LeetCode\Question167.cs" />
     <Compile Include="LeetCode\Question169.cs" />
     <Compile Include="LeetCode\Question17.cs" />
@@ -114,12 +115,14 @@
     <Compile Include="LeetCode\Question2.cs" />
     <Compile Include="LeetCode\Question20.cs" />
     <Compile Include="LeetCode\Question200.cs" />
+    <Compile Include="LeetCode\Question202.cs" />
     <Compile Include="LeetCode\Question203.cs" />
     <Compile Include="LeetCode\Question204.cs" />
     <Compile Include="LeetCode\Question205.cs" />
     <Compile Include="LeetCode\Question206.cs" />
     <Compile Include="LeetCode\Question207.cs" />
     <Compile Include="LeetCode\Question208.cs" />
+    <Compile Include="LeetCode\Question209.cs" />
     <Compile Include="LeetCode\Question21.cs" />
     <Compile Include="LeetCode\Question210.cs" />
     <Compile Include="LeetCode\Question213.cs" />
@@ -145,6 +148,7 @@
     <Compile Include="LeetCode\Question26.cs" />
     <Compile Include="LeetCode\Question260.cs" />
     <Compile Include="LeetCode\Question261.cs" />
+    <Compile Include="LeetCode\Question263.cs" />
     <Compile Include="LeetCode\Question266.cs" />
     <Compile Include="LeetCode\Question268.cs" />
     <Compile Include="LeetCode\Question27.cs" />
@@ -154,6 +158,7 @@
     <Compile Include="LeetCode\Question28.cs" />
     <Compile Include="LeetCode\Question280.cs" />
     <Compile Include="LeetCode\Question283.cs" />
+    <Compile Include="LeetCode\Question287.cs" />
     <Compile Include="LeetCode\Question289.cs" />
     <Compile Include="LeetCode\Question290.cs" />
     <Compile Include="LeetCode\Question292.cs" />
@@ -276,6 +281,7 @@
     <Compile Include="LeetCode\Question8.cs" />
     <Compile Include="LeetCode\Question80.cs" />
     <Compile Include="LeetCode\Question807.cs" />
+    <Compile Include="LeetCode\Question81.cs" />
     <Compile Include="LeetCode\Question82.cs" />
     <Compile Include="LeetCode\Question83.cs" />
     <Compile Include="LeetCode\Question832.cs" />
