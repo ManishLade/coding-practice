@@ -18,7 +18,10 @@ namespace Interview.LeetCode
             if (nums == null || nums.Length == 0)
                 return -1;
 
-            int start = 0, end = nums.Length - 1, middle = 0, middleValue = 0;
+            int start = 0, 
+                end = nums.Length - 1, 
+                middle = 0, 
+                middleValue = 0;
 
             while (start <= end)
             {
