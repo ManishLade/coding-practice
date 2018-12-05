@@ -49,8 +49,6 @@
     <Compile Include="Basic_Algorithm\Other\KMP.cs" />
     <Compile Include="Basic_Algorithm\DynamicProgramming\Knapsack.cs" />
     <Compile Include="Basic_Algorithm\DynamicProgramming\LIS.cs" />
-    <Compile Include="Basic_Algorithm\Other\Mazes.cs" />
-    <Compile Include="Basic_Algorithm\Other\Wave.cs" />
     <Compile Include="Basic_Algorithm\Search\BinarySearch.cs" />
     <Compile Include="Basic_Algorithm\Sort\HeapSort.cs" />
     <Compile Include="Basic_Algorithm\Sort\InsertSort.cs" />
