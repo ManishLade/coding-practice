@@ -199,10 +199,12 @@
     <Compile Include="LeetCode\Question350.cs" />
     <Compile Include="LeetCode\Question359.cs" />
     <Compile Include="LeetCode\Question36.cs" />
+    <Compile Include="LeetCode\Question365.cs" />
     <Compile Include="LeetCode\Question366.cs" />
     <Compile Include="LeetCode\Question369.cs" />
     <Compile Include="LeetCode\Question371.cs" />
     <Compile Include="LeetCode\Question38.cs" />
+    <Compile Include="LeetCode\Question380.cs" />
     <Compile Include="LeetCode\Question382.cs" />
     <Compile Include="LeetCode\Question387.cs" />
     <Compile Include="LeetCode\Question389.cs" />
