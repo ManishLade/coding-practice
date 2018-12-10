@@ -6,35 +6,30 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    // Refer to https://discuss.leetcode.com/topic/71065/just-explain-no-code/2
     class Question400
     {
         public static void EntryPoint()
         {
-            Console.WriteLine((new Question400()).FindNthDigit(11));
+            Console.WriteLine((new Question400()).FindNthDigit(13));
         }
 
+        // https://discuss.leetcode.com/topic/71065/just-explain-no-code/2
+        // https://leetcode.com/problems/nth-digit/discuss/88375/Short-Python+Java
         public int FindNthDigit(int n)
         {
-            if (n <= 9)
-                return n;
+            n -= 1;
 
-            long start = 1, count = 9, length = 1, num = 0;
+            int digits = 1,
+                first = 1;
 
-            while (n > count * length)
+            while (n / 9 / first / digits >= 1)
             {
-                n -= (int)(count * length);
-                start *= 10;
-                count *= 10;
-                length += 1;
+                n -= 9 * first * digits;
+                digits++;
+                first *= 10;
             }
 
-            num = n / length + start;
-
-            if (n % length == 0)
-                return Convert.ToInt32(num.ToString().ToCharArray()[n % length] - '0');
-            else
-                return Convert.ToInt32(num.ToString().ToCharArray()[n % length - 1] - '0');
+            return (first + n / digits + "")[n % digits] - '0';
         }
     }
 }
