@@ -340,7 +340,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="how-to-success-in-programming-interview.md" />
     <None Include="Statistics.xlsx" />
   </ItemGroup>
   <ItemGroup>
