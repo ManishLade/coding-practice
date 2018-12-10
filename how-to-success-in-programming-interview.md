@@ -33,4 +33,11 @@ In this repository, you will find:
 
 * Technique
 
-  When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem. 
+  When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
+
+
+## Maths
+1. How to find a target group and the position in the group?
+
+* Use / to find which group the taget will drop into.
+* Use % to find the position in the group.
