@@ -35,6 +35,9 @@ In this repository, you will find:
 
   When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
 
+## Random Value
+
+## Unique Value in Large Scale System
 
 ## Maths
 1. How to find a target group and the position in the group?
