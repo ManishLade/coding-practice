@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Interview.LeetCode
     {
         public static void EntryPoint()
         {
-            (new Question166()).FractionToDecimal(4, 333);
+            (new Question166()).FractionToDecimal(-4, 333);
         }
 
         public string FractionToDecimal(int numerator, int denominator)
@@ -21,30 +22,36 @@ namespace Interview.LeetCode
                 return "0";
 
             StringBuilder result = new StringBuilder();
-            int temp = 0;
+            Hashtable hash = new Hashtable();
+            long temp = 0;
+            long longNumerator = Math.Abs((long)numerator);
+            long longDenominator = Math.Abs((long)denominator);
 
-            result.Append(numerator / denominator);
+            if (numerator < 0 ^ denominator < 0)
+                result.Append("-");
 
-            if (numerator % denominator != 0)
+            result.Append(longNumerator / longDenominator);
+
+            temp = longNumerator % longDenominator;
+
+            if (temp != 0)
             {
                 result.Append(".");
 
-                temp = numerator % denominator;
-
                 while (temp != 0)
                 {
-                    if (temp == numerator && temp * 10 % denominator == 0)
+                    if (hash.ContainsKey(temp))
                     {
-                        result.Append("(");
-                        result.Append(temp * 10 / denominator);
+                        result.Insert((int)hash[temp], "(");
                         result.Append(")");
 
                         break;
                     }
                     else
                     {
-                        result.Append(temp * 10 / denominator);
-                        temp = temp * 10 % denominator;
+                        hash.Add(temp, result.Length);
+                        result.Append(temp * 10 / longDenominator);
+                        temp = temp * 10 % longDenominator;
                     }
                 }
             }

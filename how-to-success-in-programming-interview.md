@@ -45,7 +45,7 @@ In this repository, you will find:
 ## Testing Cases
 1. Test whether the inputs parameters are pointed to the same instance?
 2. The edge cases for Maths problem
-* Overflow: -2147483648 ~ 2147483648, etc...
+* Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
 
 ## System Design
 ## Unique Value in Large Scale System
