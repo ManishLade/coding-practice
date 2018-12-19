@@ -3,27 +3,44 @@ In this repository, you will find:
 1. The technique that will be used during a interview.
 1. The solutions for problems from LeetCode and HackerRank. 
 
+## Basic Data Structures
 ## Array
-* Technique
+* Pattern
   Whenever getting a problem that related to array, ask yourself the following questions:  
   1. Is the array sorted? If not, does sorting the array help to simplfy the problem?
   2. Can I use two and / or multiple pointers? The two pointers could be composed as a sliding window. Or, the two pointers could be put at the beginning and end of the array. Both sliding window and beginning-end pointers could help to reduce the time / space complexity.
 
 ## Linked-list
 * Technique
-1. How to sort linked-list in Onlog(n) [time complexity]?
+1. Reverse a linked-list
+2. Merge sorted linked-list
+3. How to sort linked-list in Onlog(n) [time complexity]?
+
+## Stack
+
+## Queue
 
 ## Binary Tree
 * Technique
-1. How to generate a BST from a list?
+1. DFS / BFS
+2. Rebuild binary tree from in-order / pre-order or pre-order / post-order
+3. BST
+4. How to generate a BST from a list?
+5. Typical interview questions:
+LCA
+Sum in a path
+etc
+
+## Heap
+
+## Priority Queue
 
 ## Graph
-*Technique
-1. Topology sort
-
-## Dynamic Programming
 * Technique
+1. DFS / BFS 
+2. Topology sort
 
+## Advanced Data Structure
 ## Disjoint Set
 * Technique
 
@@ -32,6 +49,25 @@ In this repository, you will find:
 
 ## Indexed Binary Search Tree
 * Technique
+
+## Sorting
+
+## Searching
+
+## Technique
+## Recursion
+
+## Divide and Conquer
+
+## Greedy
+
+## Dynamic Programming
+* Pattern
+* Typical interview questions
+
+## Backtrack
+
+## Bitwise
 
 ## Special Topics
 1. Sum
@@ -49,3 +85,4 @@ In this repository, you will find:
 
 ## System Design
 ## Unique Value in Large Scale System
+## Behavior Questions
