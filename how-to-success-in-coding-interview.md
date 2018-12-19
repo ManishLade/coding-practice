@@ -1,8 +1,3 @@
-## What will you find in this repository?
-In this repository, you will find:
-1. The technique that will be used during a interview.
-1. The solutions for problems from LeetCode and HackerRank. 
-
 ## Basic Data Structures
 ## Array
 * Pattern
@@ -82,7 +77,3 @@ etc
 1. Test whether the inputs parameters are pointed to the same instance?
 2. The edge cases for Maths problem
 * Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
-
-## System Design
-## Unique Value in Large Scale System
-## Behavior Questions
