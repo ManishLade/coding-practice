@@ -46,20 +46,14 @@
 ## Indexed Binary Search Tree
 * Pattern & Technique
 
+## Basic Algorithm Techniques
 ## Sorting
 
 ## Searching
 
-## Basic Techniques
 ## Recursion
 
 ## Divide and Conquer
-
-## Greedy
-
-## Dynamic Programming
-* Pattern & Technique
-* Typical Interview Questions
 
 ## Backtrack
 
@@ -68,7 +62,13 @@ two pointers
 
 ## Bitwise
 
-## Advanced Techniques
+## Greedy
+
+## Dynamic Programming
+* Pattern & Technique
+* Typical Interview Questions
+
+## Advanced Algorithm Techniques
 ## KMP
 
 ## Special Topics
@@ -79,7 +79,7 @@ two pointers
 1. Use / to find which group the taget will drop into.
 2. Use % to find the position in the group.
 
-## Testing Cases
+## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
 * The edge cases for Maths problem
 1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
