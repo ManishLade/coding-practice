@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question221
     {
+        public int MaximalSquare(char[,] matrix)
+        {
+            return 0;
+        }
     }
 }
