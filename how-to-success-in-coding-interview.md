@@ -78,6 +78,8 @@ two pointers
 * How to find a target group and the position in the group?
 1. Use / to find which group the taget will drop into.
 2. Use % to find the position in the group.
+3. Single element in array.
+4. Marjority in array.
 
 ## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
