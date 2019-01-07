@@ -11,6 +11,9 @@
 1. Reverse a linked-list
 2. Merge sorted linked-list
 3. How to sort linked-list in Onlog(n) [time complexity]?
+4. Find the middle of the list
+5. Find cycle
+6. Find cross
 
 ## Stack
 
@@ -80,6 +83,7 @@ two pointers
 2. Use % to find the position in the group.
 3. Single element in array.
 4. Marjority in array.
+5. Permutation: DFS, Leetcode 60
 
 ## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
