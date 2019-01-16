@@ -8,5 +8,16 @@ namespace Interview.LeetCode
 {
     class Question12
     {
+        public string IntToRoman(int num)
+        {
+            string result = string.Empty;
+
+            return result;
+        }
+
+        private string Helper()
+        {
+            return string.Empty;
+        }
     }
 }
