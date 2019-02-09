@@ -8,6 +8,7 @@ namespace Interview.LeetCode
 {
     class Question259
     {
+        // How to prove the time complexity is O(n^2)?
         public int ThreeSumSmaller(int[] nums, int target)
         {
             int result = 0,
