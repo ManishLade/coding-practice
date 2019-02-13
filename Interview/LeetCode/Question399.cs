@@ -15,6 +15,7 @@ namespace Interview.LeetCode
                                              new string[,] { { "a", "c" }, { "b", "c" }, { "a", "e" }, { "a", "a" }, { "x", "x" } });
         }
 
+        // https://leetcode.com/problems/evaluate-division/discuss/171649/1ms-DFS-with-Explanations
         public double[] CalcEquation(string[,] equations, double[] values, string[,] queries)
         {
             double[] result = new double[queries.GetLength(0)];
