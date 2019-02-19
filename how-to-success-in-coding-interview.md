@@ -77,7 +77,9 @@ two pointers
 ## Special Topics
 * Sum
   When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
+  Leetcode question: https://leetcode.com/problems/continuous-subarray-sum/description/
 * Random Value
+Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 * How to find a target group and the position in the group?
 1. Use / to find which group the taget will drop into.
 2. Use % to find the position in the group.
