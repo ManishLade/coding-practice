@@ -8,35 +8,28 @@ namespace Interview.LeetCode
 {
     class Question116
     {
+        // https://leetcode.com/problems/populating-next-right-pointers-in-each-node/discuss/37461/Java-solution-with-O(1)-memory+-O(n)-time
         public Node Connect(Node root)
         {
-            if (root != null)
+            Node mostLeft = root,
+                 currentNode = null;
+
+            while (mostLeft != null)
             {
-                Queue<Node> queue = new Queue<Node>();
-                int count = 0;
-                Node temp = null;
+                currentNode = mostLeft;
 
-                queue.Enqueue(root);
-                count = queue.Count;
-
-                while (queue.Count > 0)
+                while (currentNode != null)
                 {
-                    while (count-- > 0)
-                    {
-                        temp = queue.Dequeue();
+                    if (currentNode.left != null)
+                        currentNode.left.next = currentNode.right;
 
-                        if (queue.Count > 0 && count > 0)
-                            temp.next = queue.Peek();
+                    if (currentNode.right != null && currentNode.next != null)
+                        currentNode.right.next = currentNode.next.left;
 
-                        if (temp.left != null)
-                            queue.Enqueue(temp.left);
-
-                        if (temp.right != null)
-                            queue.Enqueue(temp.right);
-                    }
-
-                    count = queue.Count;
+                    currentNode = currentNode.next;
                 }
+
+                mostLeft = mostLeft.left;
             }
 
             return root;
