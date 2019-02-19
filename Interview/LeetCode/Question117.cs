@@ -10,33 +10,97 @@ namespace Interview.LeetCode
     {
         public Node Connect(Node root)
         {
-            if (root != null)
+            Node levelStart = root,
+                 currentNode = null,
+                 nextNode = null;
+
+            while (levelStart != null)
             {
-                Queue<Node> queue = new Queue<Node>();
-                int count = 0;
-                Node temp = null;
+                currentNode = levelStart;
 
-                queue.Enqueue(root);
-                count = queue.Count;
-
-                while (queue.Count > 0)
+                while (currentNode != null)
                 {
-                    while (count-- > 0)
+                    if (currentNode.left != null)
                     {
-                        temp = queue.Dequeue();
+                        if (currentNode.right != null)
+                            currentNode.left.next = currentNode.right;
+                        else
+                        {
+                            nextNode = currentNode.next;
 
-                        if (queue.Count > 0 && count > 0)
-                            temp.next = queue.Peek();
+                            while (nextNode != null)
+                                if (nextNode.left != null)
+                                {
+                                    currentNode.left.next = nextNode.left;
 
-                        if (temp.left != null)
-                            queue.Enqueue(temp.left);
+                                    break;
+                                }
+                                else if (nextNode.right != null)
+                                {
+                                    currentNode.left.next = nextNode.right;
 
-                        if (temp.right != null)
-                            queue.Enqueue(temp.right);
+                                    break;
+                                }
+                                else
+                                    nextNode = nextNode.next;
+                        }
                     }
 
-                    count = queue.Count;
+                    if (currentNode.right != null)
+                    {
+                        nextNode = currentNode.next;
+
+                        while (nextNode != null)
+                            if (nextNode.left != null)
+                            {
+                                currentNode.right.next = nextNode.left;
+
+                                break;
+                            }
+                            else if (nextNode.right != null)
+                            {
+                                currentNode.right.next = nextNode.right;
+
+                                break;
+                            }
+                            else
+                                nextNode = nextNode.next;
+                    }
+
+                    currentNode = currentNode.next;
                 }
+
+                if (levelStart.left != null)
+                    levelStart = levelStart.left;
+                else if (levelStart.right != null)
+                    levelStart = levelStart.right;
+                else if (levelStart.left == null && levelStart.right == null && levelStart.next != null)
+                {
+                    nextNode = levelStart.next;
+
+                    while (nextNode != null)
+                    {
+                        if (nextNode.left != null)
+                        {
+                            levelStart = nextNode.left;
+
+                            break;
+                        }
+                        else if (nextNode.right != null)
+                        {
+                            levelStart = nextNode.right;
+
+                            break;
+                        }
+                        else
+                            nextNode = nextNode.next;
+                    }
+
+                    if (nextNode == null)
+                        levelStart = null;
+                }
+                else
+                    levelStart = null;
             }
 
             return root;
