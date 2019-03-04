@@ -11,7 +11,7 @@ namespace Interview
     {
         static void Main(string[] args)
         {
-            Interview.Basic_Algorithm.Other.UnionFindTest.EntryPoint();
+            Question777.EntryPoint();
         }
     }
 }
