@@ -8,6 +8,5 @@ namespace Interview.LeetCode
 {
     class Question939
     {
-
     }
 }
