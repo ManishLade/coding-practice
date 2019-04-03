@@ -8,60 +8,82 @@ namespace Interview.LeetCode
 {
     class Question490
     {
-        bool hit = false,
-             found = false;
+        static int[][] paths = new int[5][];
 
-        public bool HasPath(int[][] maze, int[] start, int[] destination)
+        public static void EntryPoint()
         {
-            int[][] visited = new int[maze.Length][];
+            for (int i = 0; i < paths.Length; i++)
+                paths[i] = new int[5];
 
-            for (int i = 0; i < visited.Length; i++)
-                visited[i] = new int[maze[0].Length];
+            int[][] maze = new int[5][];
+            maze[0] = new int[] { 0, 0, 1, 0, 0 };
+            maze[1] = new int[] { 0, 0, 0, 0, 0 };
+            maze[2] = new int[] { 0, 0, 0, 1, 0 };
+            maze[3] = new int[] { 1, 1, 0, 1, 1 };
+            maze[4] = new int[] { 0, 0, 0, 0, 0 };
 
-            Helper(maze, visited, start[0], start[1], destination[0], destination[1]);
+            (new Question490()).HasPath(maze, new int[] { 0, 4 }, new int[] { 1, 2 });
 
-            return hit;
+            foreach (var item in paths)
+            {
+                foreach (var element in item)
+                    Console.Write(element + " ");
+
+                Console.Write("\n");
+            }
+
+            Console.Write("\n");
+
+            foreach (var item in maze)
+            {
+                foreach (var element in item)
+                    Console.Write(element + " ");
+
+                Console.Write("\n");
+            }
         }
 
-        private void Helper(int[][] maze, int[][] visited, int currentRow, int currentCol, int destinationRow, int destinationCol)
+        // https://leetcode.com/problems/the-maze/discuss/97101/C-2-solutions-DFS-and-BFS
+        public bool HasPath(int[][] maze, int[] start, int[] destination)
         {
-            bool canNavigate = false;
+            return DFS(maze, start[0], start[1], destination[0], destination[1], 1);
+        }
 
-            if (found)
-                return;
+        public bool DFS(int[][] maze, int r, int c, int destR, int destC, int path)
+        {
+            paths[r][c] = path;
 
-            visited[currentRow][currentCol] = 1;
+            if (r == destR && c == destC)
+                return true;
 
-            if (currentRow == destinationRow && currentCol == destinationCol)
-                found = true;
+            maze[r][c] = -1;
 
-            if (currentRow - 1 > -1 && maze[currentRow - 1][currentCol] != 1 && visited[currentRow - 1][currentCol] != 1)
-            {
-                canNavigate = true;
-                Helper(maze, visited, currentRow - 1, currentCol, destinationRow, destinationCol);
-            }
+            int rNext = 0;
+            int cNext = 0;
+            int maxR = maze.Length - 1;
+            int maxC = maze[0].Length - 1;
 
-            if (currentRow + 1 < maze.Length && maze[currentRow + 1][currentCol] != 1 && visited[currentRow + 1][currentCol] != 1)
-            {
-                canNavigate = true;
-                Helper(maze, visited, currentRow + 1, currentCol, destinationRow, destinationCol);
-            }
+            // roll up
+            rNext = r;
+            while (rNext > 0 && maze[rNext - 1][c] != 1) rNext--;
+            if (rNext != r && maze[rNext][c] == 0 && DFS(maze, rNext, c, destR, destC, ++path)) return true;
 
-            if (currentCol - 1 > -1 && maze[currentRow][currentCol - 1] != 1 && visited[currentRow][currentCol - 1] != 1)
-            {
-                canNavigate = true;
-                Helper(maze, visited, currentRow, currentCol - 1, destinationRow, destinationCol);
-            }
+            // roll down
+            rNext = r;
+            while (rNext < maxR && maze[rNext + 1][c] != 1) rNext++;
+            if (rNext != r && maze[rNext][c] == 0 && DFS(maze, rNext, c, destR, destC, ++path)) return true;
 
-            if (currentCol + 1 < maze[0].Length && maze[currentRow][currentCol + 1] != 1 && visited[currentRow][currentCol + 1] != 1)
-            {
-                canNavigate = true;
-                Helper(maze, visited, currentRow, currentCol + 1, destinationRow, destinationCol);
-            }
+            // roll left
+            cNext = c;
+            while (cNext > 0 && maze[r][cNext - 1] != 1) cNext--;
+            if (cNext != c && maze[r][cNext] == 0 && DFS(maze, r, cNext, destR, destC, ++path)) return true;
 
+            // roll right
+            cNext = c;
+            while (cNext < maxC && maze[r][cNext + 1] != 1) cNext++;
+            if (cNext != c && maze[r][cNext] == 0 && DFS(maze, r, cNext, destR, destC, ++path)) return true;
 
-            if (!canNavigate && currentRow == destinationRow && currentCol == destinationCol)
-                hit = true;
+            return false;
         }
     }
 }
