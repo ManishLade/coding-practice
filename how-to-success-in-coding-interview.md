@@ -38,6 +38,25 @@
 * Pattern & Technique
 1. DFS / BFS 
 2. Topology sort
+3. General Description:
+	1. maze: find a path from start point to the destination.
+	2. shortest path: find the shortest path between two known points.
+
+Data Structure:
+2D array like int[,] or int[][]
+
+Algorithm:
+	1. DFS:
+	Normally, DFS can be usded to detect whether two points in the matrix is connected or not.
+	Use recursion to implement the algorithm.
+	The spread process of DFS is random, which means it's not possible to determine which one will be picked up in the next round.
+	
+	2. BFS:
+	Normally, BFS is usded to detect the shortest path between start point and the destination. BFS can navigate from the start point layer by layer.
+	Use queue to implement the algorithm.
+	
+	3. Common:
+Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store whether current point is visited or not. It could prevent the the algorithm gets stuck in cycle.
 
 ## Advanced Data Structure
 ## Disjoint Set
