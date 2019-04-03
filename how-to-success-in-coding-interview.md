@@ -58,6 +58,8 @@ Algorithm:
 	3. Common:
 Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store whether current point is visited or not. It could prevent the the algorithm gets stuck in cycle.
 
+Path related issue: Use a dictionary or hashtable to store the detected / known path.
+
 ## Advanced Data Structure
 ## Disjoint Set
 * Pattern & Technique
