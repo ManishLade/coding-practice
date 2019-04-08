@@ -108,6 +108,10 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 4. Marjority in array.
 5. Permutation: DFS, Leetcode 60
 
+## String prefix problem
+1. Use Trie to solve the prefix problems.
+2. Trie also can be used to compose a dictionary.
+
 ## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
 * The edge cases for Maths problem
