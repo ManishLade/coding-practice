@@ -8,5 +8,11 @@ namespace Interview.Data_Structure
 {
     class Trie
     {
+
+    }
+
+    class TrieNode
+    {
+        
     }
 }

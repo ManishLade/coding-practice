@@ -109,7 +109,7 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 5. Permutation: DFS, Leetcode 60
 
 ## String prefix problem
-1. Use Trie to solve the prefix problems.
+1. Use Trie to solve the string prefix problems.
 2. Trie also can be used to compose a dictionary.
 
 ## Edge Testing Cases
