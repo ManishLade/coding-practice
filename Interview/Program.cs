@@ -11,7 +11,7 @@ namespace Interview
     {
         static void Main(string[] args)
         {
-            Question720.EntryPoint();
+            TrieTest.EntryPoint();
         }
     }
 }
