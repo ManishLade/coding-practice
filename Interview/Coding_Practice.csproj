@@ -55,8 +55,10 @@
     <Compile Include="Basic_Algorithm\Sort\InsertSort.cs" />
     <Compile Include="Basic_Algorithm\Sort\MergeSort.cs" />
     <Compile Include="Basic_Algorithm\Sort\QuickSort.cs" />
+    <Compile Include="Data_Structure\BinarySearchTree.cs" />
     <Compile Include="Data_Structure\BinaryTree.cs" />
     <Compile Include="Data_Structure\Graph.cs" />
+    <Compile Include="Data_Structure\Heap.cs" />
     <Compile Include="Data_Structure\LinkedList.cs" />
     <Compile Include="Data_Structure\PriorityQueue.cs" />
     <Compile Include="Data_Structure\Trie.cs" />
