@@ -45,6 +45,7 @@
     <Compile Include="Basic_Algorithm\DynamicProgramming\MinCoins.cs" />
     <Compile Include="Basic_Algorithm\DynamicProgramming\Factorial.cs" />
     <Compile Include="Basic_Algorithm\DynamicProgramming\Fibonacci.cs" />
+    <Compile Include="Basic_Algorithm\Other\BitAlgorithm.cs" />
     <Compile Include="Basic_Algorithm\Other\InvertString.cs" />
     <Compile Include="Basic_Algorithm\Other\KMP.cs" />
     <Compile Include="Basic_Algorithm\DynamicProgramming\Knapsack.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Data_Structure\Heap.cs" />
     <Compile Include="Data_Structure\LinkedList.cs" />
     <Compile Include="Data_Structure\PriorityQueue.cs" />
+    <Compile Include="Data_Structure\SegmentTree.cs" />
     <Compile Include="Data_Structure\Trie.cs" />
     <Compile Include="LeetCode\Data_Structure.cs" />
     <Compile Include="LeetCode\Question100.cs" />
