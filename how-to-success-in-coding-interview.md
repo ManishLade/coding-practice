@@ -119,3 +119,7 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 
 ## Build Model to Apply the Data Strucutres and Algorithms
 * Pattern & Technique
+
+## Practice
+* The list of must-do alogrithm problems:
+https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
