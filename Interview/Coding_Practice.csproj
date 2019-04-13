@@ -62,6 +62,7 @@
     <Compile Include="Data_Structure\Heap.cs" />
     <Compile Include="Data_Structure\LinkedList.cs" />
     <Compile Include="Data_Structure\PriorityQueue.cs" />
+    <Compile Include="Data_Structure\Question505.cs" />
     <Compile Include="Data_Structure\SegmentTree.cs" />
     <Compile Include="Data_Structure\Trie.cs" />
     <Compile Include="LeetCode\Data_Structure.cs" />
