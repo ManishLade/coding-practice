@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interview.Data_Structure
+namespace Interview.LeetCode
 {
     class Question505
     {
