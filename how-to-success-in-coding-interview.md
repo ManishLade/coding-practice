@@ -117,9 +117,6 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 * The edge cases for Maths problem
 1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
 
-## Build Model to Apply the Data Strucutres and Algorithms
-* Pattern & Technique
-
 ## Practice
 * The list of must-do alogrithm problems:
 https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
@@ -130,3 +127,6 @@ https://leetcode.com/problems/my-calendar-i/description/
 https://leetcode.com/problems/my-calendar-ii/description/
 
 Use De Morgan's laws to simplfy the conditions. Or, use TreeMap / SortedDictionary to store the data.
+
+* Factor
+Use (int i = 1; i * i < num; i++) as the condition of factor related problems.
