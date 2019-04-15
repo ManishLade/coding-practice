@@ -123,3 +123,10 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 ## Practice
 * The list of must-do alogrithm problems:
 https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
+
+* Problem Catalogs
+1. Calendar overlap problems:
+https://leetcode.com/problems/my-calendar-i/description/
+https://leetcode.com/problems/my-calendar-ii/description/
+
+Use De Morgan's laws to simplfy the conditions. Or, use TreeMap / SortedDictionary to store the data.
