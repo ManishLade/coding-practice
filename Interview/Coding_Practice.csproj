@@ -430,6 +430,7 @@
     <Compile Include="LeetCode\Question64.cs" />
     <Compile Include="LeetCode\Question645.cs" />
     <Compile Include="LeetCode\Question819.cs" />
+    <Compile Include="LeetCode\Question993.cs" />
     <Compile Include="Multithreading\Interview1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
