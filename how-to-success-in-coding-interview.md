@@ -130,3 +130,9 @@ Use De Morgan's laws to simplfy the conditions. Or, use TreeMap / SortedDictiona
 
 * Factor
 Use (int i = 1; i * i < num; i++) as the condition of factor related problems.
+
+* Use '#' to compose a completed tree. So that the tree will become unique.
+https://leetcode.com/problems/find-duplicate-subtrees/description/
+
+* Use AnnotationNode for trees.
+https://leetcode.com/problems/cousins-in-binary-tree/description/
