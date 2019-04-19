@@ -143,3 +143,5 @@ The first step is to analyze how to traverse the data structure. DFS (For tree, 
 * Problems to detect unique: use hash table or directionary.
 
 * The general code for Permutation and Combination
+
+* The difference between lower case and upper case. (For instance, 'a' & 'A')
