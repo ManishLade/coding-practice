@@ -153,4 +153,4 @@ https://leetcode.com/problems/hamming-distance/description/
 
 * Consider to refresh the index after the list structure is changed.
 
-* List<T> can't delete elements according to the reference.
+* List<T> can't delete elements according to the reference. Normally, it is necessary to build up a customized type to handle such scenario.
