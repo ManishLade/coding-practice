@@ -148,3 +148,9 @@ The first step is to analyze how to traverse the data structure. DFS (For tree, 
 
 * bit problems
 https://leetcode.com/problems/hamming-distance/description/
+
+* Use stack to store the MAX value in a range
+
+* Consider to refresh the index after the list structure is changed.
+
+* List<T> can't delete elements according to the reference.

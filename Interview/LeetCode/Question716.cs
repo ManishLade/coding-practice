@@ -12,29 +12,40 @@ namespace Interview.LeetCode
         {
             MaxStack obj = new MaxStack();
 
-            obj.Push(-44);
+            obj.Push(5);
+            obj.Push(1);
+            obj.Push(5);
             obj.Top();
+            obj.PopMax();
             obj.Top();
-            obj.Push(63);
-            obj.Push(-44);
-            obj.PopMax();
-            obj.Push(-35);
-            obj.PopMax();
-            obj.Push(57);
-            obj.Push(-88);
-            obj.Pop();
-            obj.Pop();
-            obj.Push(-45);
-            obj.PopMax();
-            obj.Push(-34);
             obj.PeekMax();
+            obj.Pop();
+            obj.Top();
+
+            //obj.Push(-44);
+            //obj.Top();
+            //obj.Pop();
+            //obj.Push(63);
+            //obj.Push(-44);
+            //obj.PopMax();
+            //obj.PopMax();
+            //obj.Push(-35);
+            //obj.PopMax();
+            //obj.Push(57);
+            //obj.Push(-88);
+            //obj.Pop();
+            //obj.Pop();
+            //obj.Push(-45);
+            //obj.PopMax();
+            //obj.Push(-34);
+            //obj.PeekMax();
         }
     }
 
     public class MaxStack
     {
-        private SortedList<int, List<int>> _sortedList = new SortedList<int, List<int>>();
-        private List<int> _container = new List<int>();
+        private SortedList<int, List<ListNode>> _sortedList = new SortedList<int, List<ListNode>>();
+        private DoubleLinkedList _list = new DoubleLinkedList();
 
         public MaxStack()
         {
@@ -43,30 +54,30 @@ namespace Interview.LeetCode
 
         public void Push(int x)
         {
-            _container.Add(x);
+            ListNode tempNode = _list.AddNode(x);
 
             if (!_sortedList.Keys.Contains(x))
-                _sortedList.Add(x, new List<int>());
+                _sortedList.Add(x, new List<ListNode>());
 
-            _sortedList[x].Add(_container.Count - 1);
+            _sortedList[x].Add(tempNode);
         }
 
         public int Pop()
         {
-            int result = _container[_container.Count - 1];
+            ListNode result = _list.LastNode;
 
-            _container.RemoveAt(_container.Count - 1);
-            _sortedList[result].RemoveAt(_sortedList[result].Count - 1);
+            _list.RemoveNode(result);
+            _sortedList[result.Value].RemoveAt(_sortedList[result.Value].Count - 1);
 
-            if (_sortedList[result].Count == 0)
-                _sortedList.Remove(result);
+            if (_sortedList[result.Value].Count == 0)
+                _sortedList.Remove(result.Value);
 
-            return result;
+            return result.Value;
         }
 
         public int Top()
         {
-            return _container[_container.Count - 1];
+            return _list.LastNode.Value;
         }
 
         public int PeekMax()
@@ -76,22 +87,66 @@ namespace Interview.LeetCode
 
         public int PopMax()
         {
-            int result = _sortedList.Keys.Max(),
-                index = 0;
+            ListNode result = _sortedList[_sortedList.Keys.Max()][_sortedList[_sortedList.Keys.Max()].Count - 1];
 
-            for (index = _container.Count - 1; index > -1; index--)
-                if (_container[index] == result)
-                {
-                    _container.RemoveAt(index);
-                    break;
-                }
+            _list.RemoveNode(result);
+            _sortedList[result.Value].RemoveAt(_sortedList[result.Value].Count - 1);
 
-            _sortedList[result].Remove(index);
+            if (_sortedList[result.Value].Count == 0)
+                _sortedList.Remove(result.Value);
 
-            if (_sortedList[result].Count == 0)
-                _sortedList.Remove(result);
+            return result.Value;
+        }
 
-            return result;
+        public class ListNode
+        {
+            public ListNode Prev { get; set; }
+            public ListNode Next { get; set; }
+            public int Value { get; set; }
+        }
+
+        public class DoubleLinkedList
+        {
+            private ListNode _dummyNode = new ListNode();
+
+            public int Count { get; set; }
+            public ListNode LastNode { get; set; }
+
+            public DoubleLinkedList()
+            {
+                this.LastNode = _dummyNode;
+            }
+
+            public ListNode AddNode(int value)
+            {
+                ListNode tempNode = new ListNode();
+
+                tempNode.Value = value;
+                LastNode.Next = tempNode;
+                tempNode.Prev = LastNode;
+
+                this.LastNode = tempNode;
+
+                Count++;
+
+                return tempNode;
+            }
+
+            public void RemoveNode(ListNode node)
+            {
+                ListNode prev = node.Prev,
+                         next = node.Next;
+
+                prev.Next = next;
+
+                if (next != null)
+                    next.Prev = prev;
+
+                if (next == null)
+                    this.LastNode = prev;
+
+                Count--;
+            }
         }
     }
 }
