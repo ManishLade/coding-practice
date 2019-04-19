@@ -141,3 +141,5 @@ https://leetcode.com/problems/cousins-in-binary-tree/description/
 The first step is to analyze how to traverse the data structure. DFS (For tree, pre-order / in-order / post-order?) OR BFS.
 
 * Problems to detect unique: use hash table or directionary.
+
+* The general code for Permutation and Combination
