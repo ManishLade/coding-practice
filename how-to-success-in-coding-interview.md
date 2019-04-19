@@ -145,3 +145,6 @@ The first step is to analyze how to traverse the data structure. DFS (For tree, 
 * The general code for Permutation and Combination
 
 * The difference between lower case and upper case. (For instance, 'a' & 'A')
+
+* bit problems
+https://leetcode.com/problems/hamming-distance/description/
