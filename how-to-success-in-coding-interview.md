@@ -154,3 +154,11 @@ https://leetcode.com/problems/hamming-distance/description/
 * Consider to refresh the index after the list structure is changed.
 
 * List<T> can't delete elements according to the reference. Normally, it is necessary to build up a customized type to handle such scenario.
+
+* Track the count of 26 characters.
+int[] count = new int[26];
+++count[c - 'a']; // if c is 'a', increase count[0].
+
+* Use two arrays to determine four directions while travese a graph.
+int[] rowChange = new int[] { -1, 1, 0, 0};
+int[] colChange = new int[] { 0, 0, -1, 1};
