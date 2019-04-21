@@ -24,6 +24,7 @@
 1. DFS / BFS
 2. Rebuild binary tree from in-order / pre-order or pre-order / post-order
 3. BST
+In BST, each value in left sub-tree should less than the root node and each value in right sub-tree should greater than the root node.
 4. How to generate a BST from a list?
 * Typical Interview Questions:
 1. LCA
