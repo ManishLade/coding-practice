@@ -105,7 +105,7 @@ two pointers
 * The edge cases for Maths problem
 1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
 
-## Practice
+## Special Topics & Practice
 * Sum
   When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
   Leetcode question: https://leetcode.com/problems/continuous-subarray-sum/description/
