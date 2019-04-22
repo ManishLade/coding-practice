@@ -46,7 +46,8 @@ In BST, each value in left sub-tree should less than the root node and each valu
 * Pattern & Technique
 1. DFS / BFS 
 2. Topology sort
-3. General Description:
+
+Matrix General Description:
 	1. maze: find a path from start point to the destination.
 	2. shortest path: find the shortest path between two known points.
 
