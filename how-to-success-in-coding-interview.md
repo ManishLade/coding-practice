@@ -144,6 +144,7 @@ https://leetcode.com/problems/find-duplicate-subtrees/description/
 * Use AnnotationNode for trees.
 This is a typical method to compare the tree with a completed / full binary tree.
 https://leetcode.com/problems/cousins-in-binary-tree/description/
+https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
 
 * For tree / graph problems:
 The first step is to analyze how to traverse the data structure. DFS (For tree, pre-order / in-order / post-order?) OR BFS.
