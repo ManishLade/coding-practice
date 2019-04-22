@@ -1,3 +1,10 @@
+## The General Flow To Solve a Coding Problem
+* Ask yourself the following questions:
+1. What kind of data structure is leveraged in this problem?
+2. What is the basic technique for this data structure? (Generally the complex problem description is hiding the very basic technique associating to the data structure.)
+3. If you can't answer the question 1 & 2, read the problem description again and start from the most straightforward and naive case. Implement it and then extend it to meet the problem description.
+4. At all the time, if you have the brute-force solution, write it down. It is always better than keeping the whiteboard blank at all.
+
 ## Basic Data Structures
 ## Array
 * Pattern & Technique
