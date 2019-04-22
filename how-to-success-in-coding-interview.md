@@ -65,6 +65,10 @@ Path related issue: Use a dictionary or hashtable to store the detected / known 
 ## Disjoint Set
 * Pattern & Technique
 
+## Trie
+1. Use Trie to solve the string prefix problems.
+2. Trie also can be used to compose a dictionary.
+
 ## Segment Tree
 * Pattern & Technique
 
@@ -108,10 +112,6 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 3. Single element in array.
 4. Marjority in array.
 5. Permutation: DFS, Leetcode 60
-
-## String prefix problem
-1. Use Trie to solve the string prefix problems.
-2. Trie also can be used to compose a dictionary.
 
 ## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
