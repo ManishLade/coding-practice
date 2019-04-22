@@ -142,6 +142,7 @@ Use (int i = 1; i * i < num; i++) as the condition of factor related problems.
 https://leetcode.com/problems/find-duplicate-subtrees/description/
 
 * Use AnnotationNode for trees.
+This is a typical method to compare the tree with a completed / full binary tree.
 https://leetcode.com/problems/cousins-in-binary-tree/description/
 
 * For tree / graph problems:
