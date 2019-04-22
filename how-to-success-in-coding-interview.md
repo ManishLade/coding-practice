@@ -100,7 +100,12 @@ two pointers
 ## Advanced Algorithm Techniques
 ## KMP
 
-## Special Topics
+## Edge Testing Cases
+* Test whether the inputs parameters are pointed to the same instance?
+* The edge cases for Maths problem
+1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
+
+## Practice
 * Sum
   When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
   Leetcode question: https://leetcode.com/problems/continuous-subarray-sum/description/
@@ -113,12 +118,6 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 4. Marjority in array.
 5. Permutation: DFS, Leetcode 60
 
-## Edge Testing Cases
-* Test whether the inputs parameters are pointed to the same instance?
-* The edge cases for Maths problem
-1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
-
-## Practice
 * The list of must-do alogrithm problems:
 https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
 
