@@ -169,5 +169,4 @@ int[] count = new int[26];
 int[] rowChange = new int[] { -1, 1, 0, 0};
 int[] colChange = new int[] { 0, 0, -1, 1};
 
-- [x] test
-
+- [ ] test
