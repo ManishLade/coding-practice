@@ -55,16 +55,14 @@ Data Structure:
 2D array like int[,] or int[][]
 
 Algorithm:
-	1. DFS:
-	Normally, DFS can be usded to detect whether two points in the matrix is connected or not.
-	Use recursion to implement the algorithm.
-	The spread process of DFS is random, which means it's not possible to determine which one will be picked up in the next round.
-	
-	2. BFS:
-	Normally, BFS is usded to detect the shortest path between start point and the destination. BFS can navigate from the start point layer by layer.
-	Use queue to implement the algorithm.
-	
-	3. Common:
+1. DFS:  
+Normally, DFS can be usded to detect whether two points in the matrix is connected or not.  
+Use recursion to implement the algorithm.  
+The spread process of DFS is random, which means it's not possible to determine which one will be picked up in the next round.
+2. BFS:  
+Normally, BFS is usded to detect the shortest path between start point and the destination. BFS can navigate from the start point layer by layer.  
+Use queue to implement the algorithm.
+3. Common:  
 Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store whether current point is visited or not. It could prevent the the algorithm gets stuck in cycle.
 
 Path related issue: Use a dictionary or hashtable to store the detected / known path.
@@ -130,21 +128,19 @@ Leetcode question: https://leetcode.com/problems/implement-rand10-using-rand7/
 https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
 
 * Problem Catalogs
-1. Calendar overlap problems:
-https://leetcode.com/problems/my-calendar-i/description/
-https://leetcode.com/problems/my-calendar-ii/description/
-
-Use De Morgan's laws to simplfy the conditions. Or, use TreeMap / SortedDictionary to store the data.
+1. Calendar overlap problems:  
+Use De Morgan's laws to simplfy the conditions. Or, use TreeMap / SortedDictionary to store the data.  
+https://leetcode.com/problems/my-calendar-i/description/  https://leetcode.com/problems/my-calendar-ii/description/   
 
 * Factor
 Use (int i = 1; i * i < num; i++) as the condition of factor related problems.
 
-* Use '#' to compose a completed tree. So that the tree will become unique.
+* Use '#' to compose a completed tree. So that the tree will become unique.  
 https://leetcode.com/problems/find-duplicate-subtrees/description/
 
 * Use AnnotationNode for trees.
 This is a typical method to compare the tree with a completed / full binary tree.
-https://leetcode.com/problems/cousins-in-binary-tree/description/
+https://leetcode.com/problems/cousins-in-binary-tree/description/  
 https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
 
 * For tree / graph problems:
@@ -172,3 +168,6 @@ int[] count = new int[26];
 * Use two arrays to determine four directions while travese a graph.
 int[] rowChange = new int[] { -1, 1, 0, 0};
 int[] colChange = new int[] { 0, 0, -1, 1};
+
+- [x] test
+
