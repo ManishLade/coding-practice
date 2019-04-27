@@ -92,6 +92,7 @@ Path related issue: Use a dictionary or hashtable to store the detected / known 
 
 ## Backtrack  
 1. Make sure you can describe the code runtime behavior correctly.  
+2. Backtrack is not DFS.  
 https://leetcode.com/problems/generalized-abbreviation/description/
 
 ## Sliding Window
