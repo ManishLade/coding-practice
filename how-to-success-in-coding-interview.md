@@ -90,7 +90,9 @@ Path related issue: Use a dictionary or hashtable to store the detected / known 
 
 ## Divide and Conquer
 
-## Backtrack
+## Backtrack  
+1. Make sure you can describe the code runtime behavior correctly.  
+https://leetcode.com/problems/generalized-abbreviation/description/
 
 ## Sliding Window
 two pointers
