@@ -1,7 +1,7 @@
 ﻿using System;
 using Interview.Algorithm.Other;
 using Interview.Algorithm.DynamicProgramming;
-using Interview.Data_Structure;
+using Interview.DataStructure;
 using Interview.Thread;
 using Interview.LeetCode;
 
@@ -11,7 +11,7 @@ namespace Interview
     {
         static void Main(string[] args)
         {
-            Question320.EntryPoint();
+            Question737.EntryPoint();
         }
     }
 }
