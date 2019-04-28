@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interview.Data_Structure
+namespace Interview.Algorithm.DynamicProgramming
 {
-    class Heap
+    class Dijkstra
     {
     }
 }

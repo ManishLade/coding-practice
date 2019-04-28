@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interview.Data_Structure
+namespace Interview.DataStructure
 {
     class BinaryTreeTest
     {

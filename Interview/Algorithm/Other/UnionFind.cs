@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interview.Basic_Algorithm.Other
+namespace Interview.Algorithm.Other
 {
     class UnionFindTest
     {
