@@ -8,9 +8,26 @@ namespace Interview.LeetCode
 {
     class Question979
     {
+        private int _count = 0;
+
         public int DistributeCoins(TreeNode root)
         {
-            return 0;
+            DFS(root);
+
+            return this._count;
+        }
+
+        public int DFS(TreeNode node)
+        {
+            if (node == null)
+                return 0;
+
+            int L = DFS(node.left);
+            int R = DFS(node.right);
+
+            this._count += Math.Abs(L) + Math.Abs(R);
+
+            return node.val + L + R - 1;
         }
 
         public class TreeNode
