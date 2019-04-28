@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithm\DynamicProgramming\Dijkstra.cs" />
+    <Compile Include="Algorithm\Other\Dijkstra.cs" />
     <Compile Include="Algorithm\DynamicProgramming\LCS.cs" />
     <Compile Include="Algorithm\DynamicProgramming\MinCoins.cs" />
     <Compile Include="Algorithm\DynamicProgramming\Factorial.cs" />

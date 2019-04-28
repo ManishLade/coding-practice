@@ -8,10 +8,20 @@ namespace Interview.LeetCode
 {
     class Question222
     {
-        // https://leetcode.com/problems/count-complete-tree-nodes/discuss/61958/Concise-Java-solutions-O(log(n)2)
         public int CountNodes(TreeNode root)
         {
-            return 0;
+            if (root == null)
+                return 0;
+
+            return 1 + CountNodes(root.left) + CountNodes(root.right);
+        }
+
+        public class TreeNode
+        {
+            public int val;
+            public TreeNode left;
+            public TreeNode right;
+            public TreeNode(int x) { val = x; }
         }
     }
 }
