@@ -68,10 +68,15 @@ Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store 
 Path related issue: Use a dictionary or hashtable to store the detected / known path.
 
 ## Advanced Data Structure
-## Disjoint Set
-* Pattern & Technique
+## Disjoint Set  
+* Implementation  
+https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/DataStructure/DisjointSet.cs
 
-## Trie
+* Pattern & Technique  
+1. Detect whether the graph contains cycle.
+
+## Trie  
+* Pattern & Technique  
 1. Use Trie to solve the string prefix problems.
 2. Trie also can be used to compose a dictionary.
 
