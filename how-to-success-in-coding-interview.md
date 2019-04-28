@@ -70,10 +70,13 @@ Path related issue: Use a dictionary or hashtable to store the detected / known 
 ## Advanced Data Structure
 ## Disjoint Set  
 * Implementation  
+Use rank to accelerate the search process, while a simpler approach is to ignore the rank.
 https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/DataStructure/DisjointSet.cs
 
 * Pattern & Technique  
 1. Detect whether the graph contains cycle.
+2. Detect whetehr elements are in the same group.  
+https://leetcode.com/problems/sentence-similarity-ii/description/
 
 ## Trie  
 * Pattern & Technique  
