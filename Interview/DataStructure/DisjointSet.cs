@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interview.Algorithm.Other
+namespace Interview.DataStructure
 {
     class UnionFindTest
     {
@@ -20,7 +20,7 @@ namespace Interview.Algorithm.Other
             set.Union(node1, node2);
             set.Union(node2, node3);
 
-            Console.WriteLine(set.FindSet(node2).Value);
+            Console.WriteLine(set.Find(node2).Value);
         }
     }
 
@@ -35,21 +35,21 @@ namespace Interview.Algorithm.Other
                 set.Add(node.Value, node);
         }
 
-        public Node FindSet(Node node)
+        public Node Find(Node node)
         {
             if (!set.ContainsKey(node.Value))
                 return null;
 
             if (set[node.Value].Parent.Value != node.Value)
-                set[node.Value].Parent = FindSet(set[node.Value].Parent);
+                set[node.Value].Parent = Find(set[node.Value].Parent);
 
             return set[node.Value].Parent;
         }
 
         public void Union(Node node1, Node node2)
         {
-            Node parentNode1 = FindSet(node1).Parent,
-                 parentNode2 = FindSet(node2).Parent;
+            Node parentNode1 = Find(node1).Parent,
+                 parentNode2 = Find(node2).Parent;
 
             if (parentNode1 == parentNode2)
                 return;
