@@ -51,6 +51,7 @@
     <Compile Include="Algorithm\Other\KMP.cs" />
     <Compile Include="Algorithm\DynamicProgramming\Knapsack.cs" />
     <Compile Include="Algorithm\DynamicProgramming\LIS.cs" />
+    <Compile Include="Algorithm\Other\Permutation.cs" />
     <Compile Include="DataStructure\DisjointSet.cs" />
     <Compile Include="Algorithm\Search\BinarySearch.cs" />
     <Compile Include="Algorithm\Sort\HeapSort.cs" />

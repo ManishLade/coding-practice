@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question505
     {
+        public int ShortestDistance(int[][] maze, int[] start, int[] destination)
+        {
+            return 0;
+        }
     }
 }
