@@ -47,6 +47,12 @@ In BST, each value in left sub-tree should less than the root node and each valu
 * Typical Interview Questions:  
 1. How to generate a BST from a list?
 
+### Segment Tree
+* Pattern & Technique
+
+### Binary Indexed Tree
+* Pattern & Technique
+
 ### Heap
 
 ### Priority Queue
@@ -90,12 +96,6 @@ https://leetcode.com/problems/sentence-similarity-ii/description/
 * Pattern & Technique  
 1. Use Trie to solve the string prefix problems.
 2. Trie also can be used to compose a dictionary.
-
-### Segment Tree
-* Pattern & Technique
-
-### Indexed Binary Search Tree
-* Pattern & Technique
 
 ## Algorithm
 ### Sorting
