@@ -128,8 +128,6 @@ two pointers
 Use backtrack to calculate permutation.  
 https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/Algorithm/Other/Permutation.cs
 
-### Combination
-
 ## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
 * The edge cases for Maths problem
