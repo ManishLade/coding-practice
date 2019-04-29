@@ -6,7 +6,7 @@ Ask yourself the following questions:
 4. At all the time, if you have the brute-force solution, write it down. It is always better than keeping the whiteboard blank at all.
 
 # Data Structures
-## Array
+### Array
 * Pattern & Technique
   Whenever getting a problem that related to array, ask yourself the following questions:  
   1. Is the array sorted? If not, does sorting the array help to simplfy the problem?
