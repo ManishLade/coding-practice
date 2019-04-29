@@ -125,6 +125,8 @@ two pointers
 ### KMP
 
 ### Permutation
+Use backtrack to calculate permutation.  
+https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/Algorithm/Other/Permutation.cs
 
 ### Combination
 
