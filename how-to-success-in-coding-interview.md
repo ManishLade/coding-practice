@@ -1,4 +1,4 @@
-# The General Flow To Solve a Coding Problem
+## The General Flow To Solve a Coding Problem
 Ask yourself the following questions:
 1. What kind of data structure is leveraged in this problem?
 2. What is the basic technique for this data structure? (Generally the complex problem description is hiding the very basic technique associating to the data structure.)
@@ -12,7 +12,7 @@ Ask yourself the following questions:
   1. Is the array sorted? If not, does sorting the array help to simplfy the problem?
   2. Can I use two and / or multiple pointers? The two pointers could be composed as a sliding window. Or, the two pointers could be put at the beginning and end of the array. Both sliding window and beginning-end pointers could help to reduce the time / space complexity.
 
-## Linked-list
+### Linked-list
 * Pattern & Technique
 * Typical Interview Questions
 1. Reverse a linked-list
@@ -22,11 +22,11 @@ Ask yourself the following questions:
 5. Find cycle
 6. Find cross
 
-## Stack
+### Stack
 
-## Queue
+### Queue
 
-## Binary Tree
+### Binary Tree
 * Pattern & Technique
 1. All of the tree problems could be resolved by either DFS or BFS.
 2. Get familiar the characteristic of standard trees (full tree / complete tree), like n, 2n, 2n + 1.
@@ -40,18 +40,18 @@ https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
 2. Sum in a path
 3. Rebuild binary tree from in-order / pre-order or pre-order / post-order
 
-## Binary Search Tree
+### Binary Search Tree
 * Pattern & Technique  
 In BST, each value in left sub-tree should less than the root node and each value in right sub-tree should greater than the root node.
 
 * Typical Interview Questions:  
 1. How to generate a BST from a list?
 
-## Heap
+### Heap
 
-## Priority Queue
+### Priority Queue
 
-## Graph
+### Graph
 * Pattern & Technique
 1. DFS / BFS 
 2. Topology sort
@@ -76,7 +76,7 @@ Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store 
 
 Path related issue: Use a dictionary or hashtable to store the detected / known path.
 
-## Disjoint Set  
+### Disjoint Set  
 * Implementation  
 Use rank to accelerate the search process, while a simpler approach is to ignore the rank.
 https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/DataStructure/DisjointSet.cs
@@ -86,54 +86,54 @@ https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/DataStructur
 2. Detect whetehr elements are in the same group.  
 https://leetcode.com/problems/sentence-similarity-ii/description/
 
-## Trie  
+### Trie  
 * Pattern & Technique  
 1. Use Trie to solve the string prefix problems.
 2. Trie also can be used to compose a dictionary.
 
-## Segment Tree
+### Segment Tree
 * Pattern & Technique
 
-## Indexed Binary Search Tree
+### Indexed Binary Search Tree
 * Pattern & Technique
 
-# Algorithm
-## Sorting
+## Algorithm
+### Sorting
 
-## Searching
+### Searching
 
-## Recursion
+### Recursion
 
-## Divide and Conquer
+### Divide and Conquer
 
-## Backtrack  
+### Backtrack  
 1. Make sure you can describe the code runtime behavior correctly.  
 2. Backtrack is not DFS. Each round in the backtrack, the status will be changed and the new status will be passed to the next round. After that, the status will be reset. While, normally DFS won't have the process to set the status / reset status.  
 https://leetcode.com/problems/generalized-abbreviation/description/
 
-## Sliding Window
+### Sliding Window
 two pointers
 
-## Bitwise
+### Bitwise
 
-## Greedy
+### Greedy
 
-## Dynamic Programming
+### Dynamic Programming
 * Pattern & Technique
 * Typical Interview Questions
 
-## KMP
+### KMP
 
-## Permutation
+### Permutation
 
-## Combination
+### Combination
 
-# Edge Testing Cases
+## Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
 * The edge cases for Maths problem
 1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
 
-# Special Topics & Practice
+## Special Topics & Practice
 * Sum
   When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
   Leetcode question: https://leetcode.com/problems/continuous-subarray-sum/description/
