@@ -1,11 +1,11 @@
-## The General Flow To Solve a Coding Problem
-* Ask yourself the following questions:
+# The General Flow To Solve a Coding Problem
+Ask yourself the following questions:
 1. What kind of data structure is leveraged in this problem?
 2. What is the basic technique for this data structure? (Generally the complex problem description is hiding the very basic technique associating to the data structure.)
 3. If you can't answer the question 1 & 2, read the problem description again and start from the most straightforward and naive case. Implement it and then extend it to meet the problem description.
 4. At all the time, if you have the brute-force solution, write it down. It is always better than keeping the whiteboard blank at all.
 
-## Basic Data Structures
+# Data Structures
 ## Array
 * Pattern & Technique
   Whenever getting a problem that related to array, ask yourself the following questions:  
@@ -28,15 +28,24 @@
 
 ## Binary Tree
 * Pattern & Technique
-1. DFS / BFS
-2. Rebuild binary tree from in-order / pre-order or pre-order / post-order
-3. BST
-In BST, each value in left sub-tree should less than the root node and each value in right sub-tree should greater than the root node.
-4. How to generate a BST from a list?
+1. All of the tree problems could be resolved by either DFS or BFS.
+2. Get familiar the characteristic of standard trees (full tree / complete tree), like n, 2n, 2n + 1.
+3. Use AnnotationNode for trees.
+This is a typical method to compare the tree with a completed / full binary tree.
+https://leetcode.com/problems/cousins-in-binary-tree/description/  
+https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
+
 * Typical Interview Questions:
 1. LCA
 2. Sum in a path
-3. etc
+3. Rebuild binary tree from in-order / pre-order or pre-order / post-order
+
+## Binary Search Tree
+* Pattern & Technique  
+In BST, each value in left sub-tree should less than the root node and each value in right sub-tree should greater than the root node.
+
+* Typical Interview Questions:  
+1. How to generate a BST from a list?
 
 ## Heap
 
@@ -67,7 +76,6 @@ Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store 
 
 Path related issue: Use a dictionary or hashtable to store the detected / known path.
 
-## Advanced Data Structure
 ## Disjoint Set  
 * Implementation  
 Use rank to accelerate the search process, while a simpler approach is to ignore the rank.
@@ -89,7 +97,7 @@ https://leetcode.com/problems/sentence-similarity-ii/description/
 ## Indexed Binary Search Tree
 * Pattern & Technique
 
-## Basic Algorithm Techniques
+# Algorithm
 ## Sorting
 
 ## Searching
@@ -100,7 +108,7 @@ https://leetcode.com/problems/sentence-similarity-ii/description/
 
 ## Backtrack  
 1. Make sure you can describe the code runtime behavior correctly.  
-2. Backtrack is not DFS.  
+2. Backtrack is not DFS. Each round in the backtrack, the status will be changed and the new status will be passed to the next round. After that, the status will be reset. While, normally DFS won't have the process to set the status / reset status.  
 https://leetcode.com/problems/generalized-abbreviation/description/
 
 ## Sliding Window
@@ -114,15 +122,14 @@ two pointers
 * Pattern & Technique
 * Typical Interview Questions
 
-## Advanced Algorithm Techniques
 ## KMP
 
-## Edge Testing Cases
+# Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
 * The edge cases for Maths problem
 1. Overflow: -2147483648 ~ 2147483648, Math.Abs(-2147483648), etc...
 
-## Special Topics & Practice
+# Special Topics & Practice
 * Sum
   When the problem is related to 'SUM', the sum 'prefix' will be a basic strategy to resolve the problem.
   Leetcode question: https://leetcode.com/problems/continuous-subarray-sum/description/
@@ -148,11 +155,6 @@ Use (int i = 1; i * i < num; i++) as the condition of factor related problems.
 
 * Use '#' to compose a completed tree. So that the tree will become unique.  
 https://leetcode.com/problems/find-duplicate-subtrees/description/
-
-* Use AnnotationNode for trees.
-This is a typical method to compare the tree with a completed / full binary tree.
-https://leetcode.com/problems/cousins-in-binary-tree/description/  
-https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
 
 * For tree / graph problems:
 The first step is to analyze how to traverse the data structure. DFS (For tree, pre-order / in-order / post-order?) OR BFS.
