@@ -5,7 +5,7 @@ Ask yourself the following questions:
 3. If you can't answer the question 1 & 2, read the problem description again and start from the most straightforward and naive case. Implement it and then extend it to meet the problem description.
 4. At all the time, if you have the brute-force solution, write it down. It is always better than keeping the whiteboard blank at all.
 
-# Data Structures
+## Data Structures
 ### Array
 * Pattern & Technique
   Whenever getting a problem that related to array, ask yourself the following questions:  
