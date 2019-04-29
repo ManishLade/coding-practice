@@ -124,6 +124,10 @@ two pointers
 
 ## KMP
 
+## Permutation
+
+## Combination
+
 # Edge Testing Cases
 * Test whether the inputs parameters are pointed to the same instance?
 * The edge cases for Maths problem
@@ -160,8 +164,6 @@ https://leetcode.com/problems/find-duplicate-subtrees/description/
 The first step is to analyze how to traverse the data structure. DFS (For tree, pre-order / in-order / post-order?) OR BFS.
 
 * Problems to detect unique: use hash table or directionary.
-
-* The general code for Permutation and Combination
 
 * The difference between lower case and upper case. (For instance, 'a' & 'A')
 
