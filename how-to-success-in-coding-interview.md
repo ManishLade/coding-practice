@@ -59,17 +59,6 @@ In BST, each value in left sub-tree should less than the root node and each valu
 
 ### Graph
 * Pattern & Technique
-1. DFS / BFS 
-2. Topology sort
-
-Matrix General Description:
-	1. maze: find a path from start point to the destination.
-	2. shortest path: find the shortest path between two known points.
-
-Data Structure:
-2D array like int[,] or int[][]
-
-Algorithm:
 1. DFS:  
 Normally, DFS can be usded to detect whether two points in the matrix is connected or not.  
 Use recursion to implement the algorithm.  
@@ -79,8 +68,22 @@ Normally, BFS is usded to detect the shortest path between start point and the d
 Use queue to implement the algorithm.
 3. Common:  
 Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store whether current point is visited or not. It could prevent the the algorithm gets stuck in cycle.
+4. Path related issue: Use a dictionary or hashtable to store the detected / known path.
+5. Topology sort
+6. Detect cycle  
+    a. black-white-gray  
+    https://leetcode.com/problems/find-eventual-safe-states/description/  
+    https://www.geeksforgeeks.org/detect-cycle-direct-graph-using-colors/  
+    b. Union-Find  
+    https://www.geeksforgeeks.org/union-find/
 
-Path related issue: Use a dictionary or hashtable to store the detected / known path.
+Matrix General Description:
+	1. maze: find a path from start point to the destination.
+	2. shortest path: find the shortest path between two known points.
+
+Data Structure:
+2D array like int[,] or int[][]
+
 
 ### Disjoint Set  
 * Implementation  
