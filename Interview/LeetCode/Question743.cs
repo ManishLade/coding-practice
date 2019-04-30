@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    class Question802
+    class Question743
     {
-        public IList<int> EventualSafeNodes(int[][] graph)
-        {
-
-        }
     }
 }
