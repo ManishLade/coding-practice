@@ -341,6 +341,7 @@
     <Compile Include="LeetCode\Question57.cs" />
     <Compile Include="LeetCode\Question572.cs" />
     <Compile Include="LeetCode\Question58.cs" />
+    <Compile Include="LeetCode\Question582.cs" />
     <Compile Include="LeetCode\Question59.cs" />
     <Compile Include="LeetCode\Question6.cs" />
     <Compile Include="LeetCode\Question60.cs" />
@@ -350,6 +351,7 @@
     <Compile Include="LeetCode\Question617.cs" />
     <Compile Include="LeetCode\Question62.cs" />
     <Compile Include="LeetCode\Question621.cs" />
+    <Compile Include="LeetCode\Question622.cs" />
     <Compile Include="LeetCode\Question623.cs" />
     <Compile Include="LeetCode\Question628.cs" />
     <Compile Include="LeetCode\Question63.cs" />
@@ -403,6 +405,7 @@
     <Compile Include="LeetCode\Question79.cs" />
     <Compile Include="LeetCode\Question8.cs" />
     <Compile Include="LeetCode\Question80.cs" />
+    <Compile Include="LeetCode\Question802.cs" />
     <Compile Include="LeetCode\Question807.cs" />
     <Compile Include="LeetCode\Question81.cs" />
     <Compile Include="LeetCode\Question82.cs" />
@@ -451,8 +454,10 @@
     <Compile Include="LeetCode\Question64.cs" />
     <Compile Include="LeetCode\Question645.cs" />
     <Compile Include="LeetCode\Question819.cs" />
+    <Compile Include="LeetCode\Question990.cs" />
     <Compile Include="LeetCode\Question993.cs" />
     <Compile Include="LeetCode\Question994.cs" />
+    <Compile Include="LeetCode\Question997.cs" />
     <Compile Include="Multithreading\Interview1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
