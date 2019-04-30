@@ -91,6 +91,7 @@ https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/DataStructur
 1. Detect whether the graph contains cycle.
 2. Detect whetehr elements are in the same group.  
 https://leetcode.com/problems/sentence-similarity-ii/description/
+3. Detect the connected components.
 
 ### Trie  
 * Pattern & Technique  
