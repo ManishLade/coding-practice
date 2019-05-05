@@ -77,6 +77,8 @@ Both DFS and BFS needs an additional array (boolean[,] or boolean[][]) to store 
     b. Union-Find  
     https://www.geeksforgeeks.org/union-find/
 
+7. Color the nodes of a graph
+
 Matrix General Description:
 	1. maze: find a path from start point to the destination.
 	2. shortest path: find the shortest path between two known points.
