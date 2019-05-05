@@ -114,6 +114,7 @@ https://leetcode.com/problems/sentence-similarity-ii/description/
 1. Make sure you can describe the code runtime behavior correctly.  
 2. Backtrack is not DFS. Each round in the backtrack, the status will be changed and the new status will be passed to the next round. After that, the status will be reset. While, normally DFS won't have the process to set the status / reset status.  
 https://leetcode.com/problems/generalized-abbreviation/description/
+3. If the problem description includes 'ALL', consider to use 'backtrack'.
 
 ### Sliding Window
 two pointers
