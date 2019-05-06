@@ -15,22 +15,22 @@ namespace Interview.LeetCode
 
         public int FindComplement(int num)
         {
-            int newNum = 0;
+            int result = 0;
+            bool nonZero = false;
 
-            while (num != 0)
-            {
-                if ((num & (~num + 1)) == 1)
-                    newNum = newNum << 1;
-                else
+            for (int i = 30; i >= 0; i--)
+                if (!nonZero)
                 {
-                    newNum++;
-                    newNum = newNum << 1;
+                    if (((num >> i) & 1) == 1)
+                    {
+                        nonZero = true;
+                        i++;
+                    }
                 }
+                else
+                    result += (~((num >> i) & 1) & 1) << i;
 
-                num = num >> 1;
-            }
-
-            return newNum;
+            return result;
         }
     }
 }
