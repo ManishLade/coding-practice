@@ -98,7 +98,8 @@ https://github.com/IAMRogerXi/Coding_Practice/blob/master/Interview/DataStructur
 https://leetcode.com/problems/sentence-similarity-ii/description/
 3. Detect the connected components.  
 https://leetcode.com/articles/redundant-connection/  
-https://leetcode.com/problems/accounts-merge/solution/
+https://leetcode.com/problems/accounts-merge/solution/  
+https://leetcode.com/problems/regions-cut-by-slashes/solution/
 
 ### Trie  
 * Pattern & Technique  
