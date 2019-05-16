@@ -17,7 +17,10 @@ namespace Interview.LeetCode
             int cols = matrix[0].Length;
             int[][] dist = new int[rows][];
             Queue<Tuple<int, int>> q = new Queue<Tuple<int, int>>();
-            int[,] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+            int[,] dir = { { -1, 0 },
+                           { 1, 0 },
+                           { 0, -1 },
+                           { 0, 1 } };
 
             for (int i = 0; i < rows; i++)
             {
@@ -34,7 +37,6 @@ namespace Interview.LeetCode
                         dist[i][j] = 0;
                         q.Enqueue(new Tuple<int, int>(i, j));
                     }
-
 
             while (q.Count != 0)
             {
