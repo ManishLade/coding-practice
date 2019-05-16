@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    class Question556
+    class Question842
     {
-
     }
 }
