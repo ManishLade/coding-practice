@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question487
     {
+        public int FindMaxConsecutiveOnes(int[] nums)
+        {
+            return 0;
+        }
     }
 }
