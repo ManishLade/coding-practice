@@ -16,16 +16,19 @@ namespace Interview.LeetCode
         // https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/discuss/296138/Java-solution-from-combination-perspective-with-best-explanation
         public int NumPairsDivisibleBy60(int[] time)
         {
-            int[] c = new int[60];
-            int res = 0;
+            int result = 0;
+            int[] pairs = new int[60];
 
-            foreach (var t in time)
-            {
-                res += c[(60 - t % 60) % 60];
-                c[t % 60] += 1;
-            }
+            foreach (var item in time)
+                pairs[item % 60]++;
 
-            return res;
+            for (int i = 1; i < 30; i++)
+                result += pairs[i] * pairs[60 - i];
+
+            result += pairs[0] * (pairs[0] - 1) / 2;
+            result += pairs[30] * (pairs[30] - 1) / 2;
+
+            return result;
         }
     }
 }
