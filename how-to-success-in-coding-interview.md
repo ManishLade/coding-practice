@@ -180,7 +180,8 @@ The first step is to analyze how to traverse the data structure. DFS (For tree, 
 * bit problems
 https://leetcode.com/problems/hamming-distance/description/
 
-* Use stack to store the MAX value in a range
+* Use stack to store the MAX value in a range.  
+https://leetcode.com/problems/next-greater-node-in-linked-list/description/
 
 * Consider to refresh the index after the list structure is changed.
 
