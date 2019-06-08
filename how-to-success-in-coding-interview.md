@@ -122,7 +122,10 @@ https://leetcode.com/problems/generalized-abbreviation/description/
 3. If the problem description includes 'ALL', consider to use 'backtrack'.
 
 ### Sliding Window
-two pointers
+* two pointers
+* Use sliding window to calculate the max sum of a window in a range. For instance, there is an array A and a sliding window S. Calculate the max sum of elements that S will cover in A.   
+https://leetcode.com/problems/grumpy-bookstore-owner/description/
+
 
 ### Bitwise
 
