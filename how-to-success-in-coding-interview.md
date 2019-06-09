@@ -134,6 +134,8 @@ https://leetcode.com/problems/grumpy-bookstore-owner/description/
 ### Dynamic Programming
 * Pattern & Technique
 * Typical Interview Questions
+* Variant of knapsacks  
+https://leetcode.com/problems/last-stone-weight-ii/description/
 
 ### KMP
 
