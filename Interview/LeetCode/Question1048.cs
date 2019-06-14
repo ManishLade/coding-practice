@@ -10,14 +10,14 @@ namespace Interview.LeetCode
     {
         public int LongestStrChain(string[] words)
         {
-            Dictionary<string, int> map = new Dictionary<string, int>();
             int res = 0;
+            Dictionary<string, int> _dictionary = new Dictionary<string, int>();
 
             Array.Sort(words, (a, b) => a.Length - b.Length);
 
             foreach (string word in words)
             {
-                map[word] = 1;
+                _dictionary[word] = 1;
 
                 for (int i = 0; i < word.Length; i++)
                 {
@@ -25,11 +25,11 @@ namespace Interview.LeetCode
                     sb.Remove(i, 1);
                     string next = sb.ToString();
 
-                    if (map.ContainsKey(next) && map[next] + 1 > map[word])
-                        map[word] = map[next] + 1;
+                    if (_dictionary.ContainsKey(next) && _dictionary[next] + 1 > _dictionary[word])
+                        _dictionary[word] = _dictionary[next] + 1;
                 }
 
-                res = Math.Max(res, map[word]);
+                res = Math.Max(res, _dictionary[word]);
             }
 
             return res;
