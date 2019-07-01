@@ -25,6 +25,7 @@ namespace Interview.LeetCode
                 while (s1.Count != 0 && s1.Peek()[0] > A[i])
                     count += s1.Pop()[1];
                 s1.Push(new int[] { A[i], count });
+
                 left[i] = count;
             }
 
@@ -35,6 +36,7 @@ namespace Interview.LeetCode
                 while (s2.Count != 0 && s2.Peek()[0] >= A[i])
                     count += s2.Pop()[1];
                 s2.Push(new int[] { A[i], count });
+
                 right[i] = count;
             }
 
