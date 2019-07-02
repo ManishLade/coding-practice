@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interview.DataStructure
 {
+    // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     class Heap
     {
         private int[] _internalArray { get; set; }
