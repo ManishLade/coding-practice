@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Interview.DataStructure
 {
+    // https://visualstudiomagazine.com/articles/2012/11/01/priority-queues-with-c.aspx
+    // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     class PriorityQueue<T> where T : IComparable<T>
     {
         private List<T> data = null;
@@ -34,9 +36,9 @@ namespace Interview.DataStructure
 
         public void Enqueue(T item)
         {
-            int i = data.Count - 1;
-
             data.Add(item);
+
+            int i = data.Count - 1;
 
             while (i > 0)
             {
