@@ -107,7 +107,7 @@
     <Compile Include="LeetCode\Question505.cs" />
     <Compile Include="DataStructure\SegmentTree.cs" />
     <Compile Include="DataStructure\Trie.cs" />
-    <Compile Include="LeetCode\Data_Structure.cs" />
+    <Compile Include="LeetCode\data-structure.cs" />
     <Compile Include="LeetCode\Question100.cs" />
     <Compile Include="LeetCode\Question101.cs" />
     <Compile Include="LeetCode\Question102.cs" />
