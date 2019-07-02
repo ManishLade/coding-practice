@@ -2,14 +2,57 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Interview.DataStructure
 {
+    public class PriorityQueueTest
+    {
+        public static void EntryPoint()
+        {
+            PQNode node1 = new PQNode(2),
+                   node2 = new PQNode(9),
+                   node3 = new PQNode(1);
+
+            PriorityQueue<PQNode> pq = new PriorityQueue<PQNode>();
+
+            pq.Enqueue(node1);
+            Console.WriteLine(pq.Peek().value);
+
+            pq.Enqueue(node2);
+            Console.WriteLine(pq.Peek().value);
+
+            pq.Enqueue(node3);
+            Console.WriteLine(pq.Peek().value);
+
+            pq.Dequeue();
+            Console.WriteLine(pq.Peek().value);
+
+            pq.Dequeue();
+            Console.WriteLine(pq.Peek().value);
+        }
+
+        public class PQNode : IComparable<PQNode>
+        {
+            public int value = 0;
+
+            public PQNode(int val)
+            {
+                this.value = val;
+            }
+
+            public int CompareTo(PQNode other)
+            {
+                return value.CompareTo(other.value);
+            }
+        }
+    }
+
     // https://visualstudiomagazine.com/articles/2012/11/01/priority-queues-with-c.aspx
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
-    class PriorityQueue<T> where T : IComparable<T>
+    public class PriorityQueue<T> where T : IComparable<T>
     {
         private List<T> data = null;
 
@@ -44,7 +87,7 @@ namespace Interview.DataStructure
             {
                 int m = (i - 1) / 2;
 
-                if (data[i].CompareTo(data[m]) >= 0)
+                if (data[i].CompareTo(data[m]) <= 0)
                     break;
 
                 var temp = data[i];
@@ -70,10 +113,10 @@ namespace Interview.DataStructure
             {
                 int r = i + 1;
 
-                if (r <= last && data[r].CompareTo(data[i]) < 0)
+                if (r <= last && data[r].CompareTo(data[i]) > 0)
                     i = r;
 
-                if (data[m].CompareTo(data[i]) <= 0)
+                if (data[m].CompareTo(data[i]) >= 0)
                     break;
 
                 var temp = data[i];
