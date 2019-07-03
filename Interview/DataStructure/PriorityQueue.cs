@@ -50,6 +50,9 @@ namespace Interview.DataStructure
         }
     }
 
+    // This is a MIN priority queue with the nature of hashtable. What is hash map + heap? Refer the following GitHub repository.
+    // https://github.com/mission-peace/interview/blob/259077bacabdbb5b6a0e918cd8dfe5eabca3300f/src/com/interview/graph/BinaryMinHeap.java
+    // The general concept of priority queue is as below.
     // https://visualstudiomagazine.com/articles/2012/11/01/priority-queues-with-c.aspx
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     public class PriorityQueue<T> where T : IComparable<T>
@@ -87,7 +90,7 @@ namespace Interview.DataStructure
             {
                 int m = (i - 1) / 2;
 
-                if (data[i].CompareTo(data[m]) <= 0)
+                if (data[i].CompareTo(data[m]) >= 0)
                     break;
 
                 var temp = data[i];
@@ -113,10 +116,10 @@ namespace Interview.DataStructure
             {
                 int r = i + 1;
 
-                if (r <= last && data[r].CompareTo(data[i]) > 0)
+                if (r <= last && data[r].CompareTo(data[i]) < 0)
                     i = r;
 
-                if (data[m].CompareTo(data[i]) >= 0)
+                if (data[m].CompareTo(data[i]) <= 0)
                     break;
 
                 var temp = data[i];
@@ -127,6 +130,11 @@ namespace Interview.DataStructure
             }
 
             return item;
+        }
+
+        public bool ContainsItem(T item)
+        {
+            return data.Contains(item);
         }
 
         public T Peek()
