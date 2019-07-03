@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace Interview.DataStructure
 {
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
-    class Heap
+    class MaxHeap
     {
-        private int[] _internalArray { get; set; }
+        private int[] _data { get; set; }
 
-        public Heap(int[] input)
+        public MaxHeap(int[] input)
         {
-            _internalArray = input;
+            _data = input;
 
-            BuildMaxHeap(_internalArray, _internalArray.Length - 1);
+            BuildMaxHeap(_data, _data.Length - 1);
         }
 
         private void BuildMaxHeap(int[] input, int end)
@@ -50,13 +50,13 @@ namespace Interview.DataStructure
 
         public void SortByASC()
         {
-            for (int i = (_internalArray.Length - 1); i >= 0; i--)
+            for (int i = (_data.Length - 1); i >= 0; i--)
             {
-                int temp = _internalArray[i];
-                _internalArray[i] = _internalArray[0];
-                _internalArray[0] = temp;
+                int temp = _data[i];
+                _data[i] = _data[0];
+                _data[0] = temp;
 
-                BuildMaxHeap(_internalArray, (i - 1));
+                BuildMaxHeap(_data, (i - 1));
             }
         }
 
@@ -64,10 +64,17 @@ namespace Interview.DataStructure
         {
             StringBuilder output = new StringBuilder();
 
-            foreach (var item in _internalArray)
+            foreach (var item in _data)
                 output.Append(item.ToString() + " ");
 
             return output.ToString();
         }
+    }
+
+    // This is a MIN priority queue with the nature of hashtable. What is hash map + heap? Refer the following GitHub repository.
+    // https://github.com/mission-peace/interview/blob/259077bacabdbb5b6a0e918cd8dfe5eabca3300f/src/com/interview/graph/BinaryMinHeap.java
+    class MinHeap
+    {
+
     }
 }

@@ -33,26 +33,9 @@ namespace Interview.DataStructure
             pq.Dequeue();
             Console.WriteLine(pq.Peek().value);
         }
-
-        public class PQNode : IComparable<PQNode>
-        {
-            public int value = 0;
-
-            public PQNode(int val)
-            {
-                this.value = val;
-            }
-
-            public int CompareTo(PQNode other)
-            {
-                return value.CompareTo(other.value);
-            }
-        }
     }
 
-    // This is a MIN priority queue with the nature of hashtable. What is hash map + heap? Refer the following GitHub repository.
-    // https://github.com/mission-peace/interview/blob/259077bacabdbb5b6a0e918cd8dfe5eabca3300f/src/com/interview/graph/BinaryMinHeap.java
-    // The general concept of priority queue is as below.
+    // This is a Min priority queue. The general concept of priority queue is as below.
     // https://visualstudiomagazine.com/articles/2012/11/01/priority-queues-with-c.aspx
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     public class PriorityQueue<T> where T : IComparable<T>
@@ -132,14 +115,24 @@ namespace Interview.DataStructure
             return item;
         }
 
-        public bool ContainsItem(T item)
-        {
-            return data.Contains(item);
-        }
-
         public T Peek()
         {
             return data[0];
+        }
+    }
+
+    class PQNode : IComparable<PQNode>
+    {
+        public int value = 0;
+
+        public PQNode(int val)
+        {
+            this.value = val;
+        }
+
+        public int CompareTo(PQNode other)
+        {
+            return value.CompareTo(other.value);
         }
     }
 }
