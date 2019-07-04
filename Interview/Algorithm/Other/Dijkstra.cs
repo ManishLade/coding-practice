@@ -9,48 +9,31 @@ namespace Interview.Algorithm.Other
 {
     class DijkstraShortestPath
     {
-        public static void EntryPoint()
-        {
-            // Use adjacency list
-            // Tuple is graph node. First item is the adjacency node. Second item is the weight between these two nodes.
-            //List<Node>[] graph = new List<Node>[6];
-
-            //for (int i = 0; i < 6; i++)
-            //    graph[i] = new List<Node>();
-
-            //graph[0].Add(new Tuple<int, int>(1, 5));
-            //graph[0].Add(new Tuple<int, int>(3, 9));
-            //graph[0].Add(new Tuple<int, int>(4, 2));
-            //graph[1].Add(new Tuple<int, int>(2, 2));
-            //graph[2].Add(new Tuple<int, int>(3, 3));
-            //graph[4].Add(new Tuple<int, int>(5, 3));
-            //graph[5].Add(new Tuple<int, int>(3, 2));
-
-            //(new DijkstraShortestPath()).GetShortestPath(graph, 0);
-        }
-
-        //public class Node : IComparable<Node>
+        //public static void EntryPoint()
         //{
-        //    public int key = 0,
-        //               weight = 0;
+        //    // Use adjacency list
+        //    // Tuple is graph node. First item is the adjacency node. Second item is the weight between these two nodes.
+        //    List<Tuple<int, int>>[] graph = new List<Tuple<int, int>>[6];
 
-        //    public Node(int key, int weight)
-        //    {
-        //        this.key = key;
-        //        this.weight = weight;
-        //    }
+        //    for (int i = 0; i < 6; i++)
+        //        graph[i] = new List<Tuple<int, int>>();
 
-        //    public int CompareTo(Node other)
-        //    {
-        //        return this.weight >= other.weight ? 1 : -1;
-        //    }
+        //    graph[0].Add(new Tuple<int, int>(1, 5));
+        //    graph[0].Add(new Tuple<int, int>(3, 9));
+        //    graph[0].Add(new Tuple<int, int>(4, 2));
+        //    graph[1].Add(new Tuple<int, int>(2, 2));
+        //    graph[2].Add(new Tuple<int, int>(3, 3));
+        //    graph[4].Add(new Tuple<int, int>(5, 3));
+        //    graph[5].Add(new Tuple<int, int>(3, 2));
+
+        //    (new DijkstraShortestPath()).GetShortestPath(graph, 0);
         //}
 
         //public List<Tuple<int, int>> GetShortestPath(List<Tuple<int, int>>[] graph, int sourceVertex)
         //{
-
         //    //heap + map data structure
         //    BinaryMinHeap<Vertex<Integer>> minHeap = new BinaryMinHeap<>();
+        //    MinHeap minHeap =
 
         //    //stores shortest distance from root to every vertex
         //    Map<Vertex<Integer>, Integer> distance = new HashMap<>();

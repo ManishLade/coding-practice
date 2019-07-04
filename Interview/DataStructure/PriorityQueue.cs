@@ -35,7 +35,8 @@ namespace Interview.DataStructure
         }
     }
 
-    // This is a Min priority queue. The general concept of priority queue is as below.
+    // This is a Min priority queue. The element with lowest rank / weight is the first one to be dequeued.
+    // The general concept of priority queue is as below.
     // https://visualstudiomagazine.com/articles/2012/11/01/priority-queues-with-c.aspx
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     public class PriorityQueue<T> where T : IComparable<T>
