@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,45 +77,63 @@ namespace Interview.DataStructure
     // https://github.com/mission-peace/interview/blob/259077bacabdbb5b6a0e918cd8dfe5eabca3300f/src/com/interview/graph/BinaryMinHeap.java
     class MinHeap<T>
     {
-        private List<Tuple<T, int>> _data = new List<Tuple<T, int>>();
-        private Dictionary<T, int> _dictionary = new Dictionary<T, int>();
+        private List<HeapNode<T>> _data = new List<HeapNode<T>>();
+        private Hashtable _hash = new Hashtable();
 
         public bool Contains(T item)
         {
-            return _dictionary.ContainsKey(item);
+            return _hash.ContainsKey(item);
         }
 
         public void Add(T item, int weight)
         {
+            _data.Add(new HeapNode<T>(item, weight));
+            _hash.Add(item, _data.Count - 1);
 
+            MinHeapify(_data.Count - 1);
         }
 
-        public void ChangeWeight(T item, int weight)
+        public void Decrease(T item, int weight)
         {
+            if (!_hash.ContainsKey(item))
+                return;
 
+            _data[(int)_hash[item]].Weight = weight;
+
+            MinHeapify((int)_hash[item]);
         }
 
-        public Tuple<T, int> PeekHeapNode()
+        public void Increase(T item, int weight)
+        {
+            if (!_hash.ContainsKey(item))
+                return;
+
+            _data[(int)_hash[item]].Weight = weight;
+
+            MinHeapify((int)_hash[item], _data.Count - 1);
+        }
+
+        public HeapNode<T> PeekHeapNode()
         {
             return _data.Count != 0 ? _data[0] : null;
         }
 
         public T PeekKey()
         {
-            return PeekHeapNode().Item1;
+            return PeekHeapNode().Key;
         }
 
         public int PeekWeight()
         {
-            return PeekHeapNode().Item2;
+            return PeekHeapNode().Weight;
         }
 
-        public Tuple<T, int> ExtractHeapNode()
+        public HeapNode<T> ExtractHeapNode()
         {
             if (_data.Count == 0)
                 return null;
 
-            Tuple<T, int> min = _data[0];
+            HeapNode<T> min = _data[0];
             _data[0] = _data[_data.Count - 1];
             _data.RemoveAt(_data.Count - 1);
 
@@ -124,37 +144,75 @@ namespace Interview.DataStructure
 
         public T ExtractKey()
         {
-            return ExtractHeapNode().Item1;
+            return ExtractHeapNode().Key;
         }
 
         public int ExtractWeight()
         {
-            return ExtractHeapNode().Item2;
+            return ExtractHeapNode().Weight;
         }
 
-        private void MinHeapify(int currentPosition, int end)
+        // Heapify the data collection from current index to top.
+        private void MinHeapify(int index)
         {
-            int smallestPosition,
-                leftPosition = 2 * currentPosition + 1,
-                rightPosition = 2 * currentPosition + 2;
-            Tuple<T, int> temp;
-
-            if (leftPosition <= end && _data[currentPosition].Item2 > _data[leftPosition].Item2)
-                smallestPosition = leftPosition;
-            else
-                smallestPosition = currentPosition;
-
-            if (rightPosition <= end && _data[smallestPosition].Item2 > _data[rightPosition].Item2)
-                smallestPosition = rightPosition;
-
-            if (smallestPosition != currentPosition)
+            while (index >= 0 && _data[(index - 1) / 2].Weight > _data[index].Weight)
             {
-                temp = _data[smallestPosition];
-                _data[smallestPosition] = _data[currentPosition];
-                _data[currentPosition] = temp;
+                Swap((index - 1) / 2, index);
 
-                MinHeapify(smallestPosition, end);
+                index = (index - 1) / 2;
             }
+        }
+
+        // Heapify the data collection from current index to bottom.
+        private void MinHeapify(int index, int end)
+        {
+            int smallestIndex,
+                leftIndex = 2 * index + 1,
+                rightIndex = 2 * index + 2;
+
+            if (leftIndex <= end && _data[index].Weight > _data[leftIndex].Weight)
+                smallestIndex = leftIndex;
+            else
+                smallestIndex = index;
+
+            if (rightIndex <= end && _data[smallestIndex].Weight > _data[rightIndex].Weight)
+                smallestIndex = rightIndex;
+
+            if (smallestIndex != index)
+            {
+                Swap(smallestIndex, index);
+
+                MinHeapify(smallestIndex, end);
+            }
+        }
+
+        private void Swap(int index1, int index2)
+        {
+            HeapNode<T> temp = _data[index1];
+            _data[index1] = _data[index2];
+            _data[index2] = temp;
+
+            if (_hash.ContainsKey(_data[index1].Key))
+                _hash.Add(_data[index1].Key, index2);
+            else
+                _hash[_data[index1].Key] = index2;
+
+            if (_hash.ContainsKey(_data[index2].Key))
+                _hash.Add(_data[index2].Key, index1);
+            else
+                _hash[_data[index2].Key] = index1;
+        }
+    }
+
+    public class HeapNode<T>
+    {
+        public T Key;
+        public int Weight;
+
+        public HeapNode(T key, int weight)
+        {
+            this.Key = key;
+            this.Weight = weight;
         }
     }
 }
