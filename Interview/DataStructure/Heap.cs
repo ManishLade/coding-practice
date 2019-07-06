@@ -8,6 +8,47 @@ using System.Threading.Tasks;
 
 namespace Interview.DataStructure
 {
+    class HeapTest
+    {
+        public static void EntryPoint()
+        {
+            MinHeap<char> heap = new MinHeap<char>();
+
+            heap.Add('A', 15);
+            Console.WriteLine(heap.PeekKey());
+
+            heap.Add('B', 11);
+            Console.WriteLine(heap.PeekKey());
+
+            heap.Add('C', 8);
+            Console.WriteLine(heap.PeekKey());
+
+            heap.Add('D', 5);
+            Console.WriteLine(heap.PeekKey());
+            
+            heap.Add('E', 16);
+            Console.WriteLine(heap.PeekKey());
+
+            heap.Add('F', 2);
+            Console.WriteLine(heap.PeekKey());
+
+            heap.Add('G', 4);
+            Console.WriteLine(heap.PeekKey());
+
+            //Console.WriteLine(heap.ExtractKey());
+            //Console.WriteLine(heap.PeekKey());
+
+            //Console.WriteLine(heap.ExtractKey());
+            //Console.WriteLine(heap.PeekKey());
+
+            //Console.WriteLine(heap.ExtractKey());
+            //Console.WriteLine(heap.PeekKey());
+
+            heap.Increase('F', 10);
+            Console.WriteLine(heap.PeekKey());
+        }
+    }
+    
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     class MaxHeap
     {
@@ -192,15 +233,15 @@ namespace Interview.DataStructure
             _data[index1] = _data[index2];
             _data[index2] = temp;
 
-            if (_hash.ContainsKey(_data[index1].Key))
-                _hash.Add(_data[index1].Key, index2);
+            if (!_hash.ContainsKey(_data[index1].Key))
+                _hash.Add(_data[index1].Key, index1);
             else
-                _hash[_data[index1].Key] = index2;
+                _hash[_data[index1].Key] = index1;
 
-            if (_hash.ContainsKey(_data[index2].Key))
-                _hash.Add(_data[index2].Key, index1);
+            if (!_hash.ContainsKey(_data[index2].Key))
+                _hash.Add(_data[index2].Key, index2);
             else
-                _hash[_data[index2].Key] = index1;
+                _hash[_data[index2].Key] = index2;
         }
     }
 
