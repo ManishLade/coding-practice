@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace Interview.DataStructure
 
             heap.Add('D', 5);
             Console.WriteLine(heap.PeekKey());
-            
+
             heap.Add('E', 16);
             Console.WriteLine(heap.PeekKey());
 
@@ -48,7 +49,7 @@ namespace Interview.DataStructure
             Console.WriteLine(heap.PeekKey());
         }
     }
-    
+
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     class MaxHeap
     {
@@ -121,6 +122,25 @@ namespace Interview.DataStructure
         private List<HeapNode<T>> _data = new List<HeapNode<T>>();
         private Hashtable _hash = new Hashtable();
 
+        public int Count
+        {
+            get
+            {
+                return _data.Count;
+            }
+        }
+
+        public HeapNode<T> this[T item]
+        {
+            get
+            {
+                if (!_hash.ContainsKey(item))
+                    return null;
+
+                return _data[(int)_hash[item]];
+            }
+        }
+
         public bool Contains(T item)
         {
             return _hash.ContainsKey(item);
@@ -178,6 +198,8 @@ namespace Interview.DataStructure
             _data[0] = _data[_data.Count - 1];
             _data.RemoveAt(_data.Count - 1);
 
+            _hash.Remove(min.Key);
+
             MinHeapify(0, _data.Count - 1);
 
             return min;
@@ -225,6 +247,9 @@ namespace Interview.DataStructure
 
                 MinHeapify(smallestIndex, end);
             }
+            else
+                for (int i = index; i <= end; i++)
+                    _hash[_data[i].Key] = i;
         }
 
         private void Swap(int index1, int index2)
