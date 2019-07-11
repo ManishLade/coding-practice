@@ -53,22 +53,55 @@ namespace Interview.DataStructure
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     class MaxHeap
     {
-        private int[] _data { get; set; }
+        private List<int> _data { get; set; }
 
         public MaxHeap(int[] input)
         {
-            _data = input;
+            _data = new List<int>(input);
 
-            BuildMaxHeap(_data, _data.Length - 1);
+            BuildMaxHeap(_data, _data.Count - 1);
         }
 
-        private void BuildMaxHeap(int[] input, int end)
+        public int Extract()
         {
-            for (int i = (input.Length - 2) / 2; i >= 0; i--)
+            int max = _data[0];
+
+            _data[0] = _data[_data.Count - 1];
+            _data.RemoveAt(_data.Count - 1);
+            BuildMaxHeap(_data, _data.Count - 1);
+
+            return max;
+        }
+
+        public void SortByASC()
+        {
+            for (int i = _data.Count - 1; i > 0; i--)
+            {
+                int temp = _data[i];
+                _data[i] = _data[0];
+                _data[0] = temp;
+
+                BuildMaxHeap(_data, i - 1);
+            }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder output = new StringBuilder();
+
+            foreach (var item in _data)
+                output.Append(item.ToString() + " ");
+
+            return output.ToString();
+        }
+
+        private void BuildMaxHeap(List<int> input, int end)
+        {
+            for (int i = (input.Count - 2) / 2; i >= 0; i--)
                 MaxHeapify(input, i, end);
         }
 
-        private void MaxHeapify(int[] input, int currentPosition, int end)
+        private void MaxHeapify(List<int> input, int currentPosition, int end)
         {
             int largestPosition = 0,
                 leftPosition = 2 * currentPosition + 1,
@@ -90,28 +123,6 @@ namespace Interview.DataStructure
 
                 MaxHeapify(input, largestPosition, end);
             }
-        }
-
-        public void SortByASC()
-        {
-            for (int i = _data.Length - 1; i > 0; i--)
-            {
-                int temp = _data[i];
-                _data[i] = _data[0];
-                _data[0] = temp;
-
-                BuildMaxHeap(_data, i - 1);
-            }
-        }
-
-        public override string ToString()
-        {
-            StringBuilder output = new StringBuilder();
-
-            foreach (var item in _data)
-                output.Append(item.ToString() + " ");
-
-            return output.ToString();
         }
     }
 

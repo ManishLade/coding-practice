@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    class Question796
+    class Question1099
     {
-        public bool RotateString(string A, string B)
-        {
-            return A.Length == B.Length && (A + A).Contains(B);
-        }
     }
 }
