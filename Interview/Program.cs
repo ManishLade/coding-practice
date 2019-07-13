@@ -12,7 +12,7 @@ namespace Interview
     {
         static void Main(string[] args)
         {
-            Question742.EntryPoint();
+            Question791.EntryPoint();
         }
     }
 }
