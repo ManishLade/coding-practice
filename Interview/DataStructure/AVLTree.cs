@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interview.Algorithm.Sort
+namespace Interview.DataStructure
 {
-    class TopologySort
+    class AVLTree
     {
     }
 }
