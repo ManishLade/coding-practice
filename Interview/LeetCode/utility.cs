@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    class utility
+    public class utility
     {
         public static int[][] ConvertStringToIntArray(string s)
         {

@@ -65,6 +65,7 @@
     <Compile Include="DataStructure\Heap.cs" />
     <Compile Include="DataStructure\LinkedList.cs" />
     <Compile Include="DataStructure\PriorityQueue.cs" />
+    <Compile Include="LeetCode\Question1102.cs" />
     <Compile Include="LeetCode\Question1010.cs" />
     <Compile Include="LeetCode\Question1019.cs" />
     <Compile Include="LeetCode\Question1022.cs" />
