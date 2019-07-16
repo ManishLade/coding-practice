@@ -50,6 +50,7 @@ namespace Interview.DataStructure
         }
     }
 
+    // TODO: modify the queue. Then use the queue to finish question 1102.
     // https://www.hackerearth.com/practice/notes/heaps-and-priority-queues/
     class MaxHeap
     {
