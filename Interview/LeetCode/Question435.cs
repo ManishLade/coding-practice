@@ -9,6 +9,11 @@ namespace Interview.LeetCode
 {
     class Question435
     {
+        public static void EntryPoint()
+        {
+            (new Question435()).EraseOverlapIntervals(utility.ConvertStringToIntArray("[1,3],[4,7],[8,10],[2,5]"));
+        }
+
         public int EraseOverlapIntervals(int[][] intervals)
         {
             if (intervals.Length == 0)
