@@ -118,6 +118,7 @@
     <Compile Include="LeetCode\Question477.cs" />
     <Compile Include="LeetCode\Question487.cs" />
     <Compile Include="LeetCode\Question496.cs" />
+    <Compile Include="LeetCode\Question498.cs" />
     <Compile Include="LeetCode\Question503.cs" />
     <Compile Include="LeetCode\Question505.cs" />
     <Compile Include="DataStructure\SegmentTree.cs" />
@@ -533,6 +534,7 @@
     <Compile Include="LeetCode\Question645.cs" />
     <Compile Include="LeetCode\Question819.cs" />
     <Compile Include="LeetCode\Question983.cs" />
+    <Compile Include="LeetCode\Question986.cs" />
     <Compile Include="LeetCode\Question987.cs" />
     <Compile Include="LeetCode\Question990.cs" />
     <Compile Include="LeetCode\Question993.cs" />
