@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,44 +9,59 @@ namespace Interview.LeetCode
 {
     class Question886
     {
+        public static void EntryPoint()
+        {
+            int[][] dislikes = new int[4][];
+            dislikes[0] = new int[] { 1, 2 };
+            dislikes[1] = new int[] { 2, 3 };
+            dislikes[2] = new int[] { 1, 4 };
+            dislikes[3] = new int[] { 3, 4 };
+
+            (new Question886()).PossibleBipartition(4, dislikes);
+
+            //int[][] dislikes = new int[3][];
+            //dislikes[0] = new int[] { 1, 2 };
+            //dislikes[1] = new int[] { 2, 3 };
+            //dislikes[2] = new int[] { 1, 4 };
+
+            //(new Question886()).PossibleBipartition(4, dislikes);
+        }
+
+        List<int>[] graph = null;
+        Dictionary<int, int> color = new Dictionary<int, int>();
+
         public bool PossibleBipartition(int N, int[][] dislikes)
         {
-            int[] colors = new int[N + 1];
+            graph = new List<int>[N + 1];
 
-            for (int i = 1; i <= N; i++)
-                colors[i] = i;
+            for (int i = 1; i <= N; ++i)
+                graph[i] = new List<int>();
 
-            for (int i = 0; i < dislikes.Length; i++)
+            foreach (int[] edge in dislikes)
             {
-                int p1 = dislikes[i][0],
-                    p2 = dislikes[i][1];
-
-                if (colors[p2] == p2)
-                    colors[p2] = p1;
-                else
-                {
-                    int[] uf1 = Find(p1, colors), 
-                          uf2 = Find(p2, colors);
-
-                    if (uf1[0] == uf2[0] && uf1[1] == uf2[1])
-                        return false;
-                }
+                graph[edge[0]].Add(edge[1]);
+                graph[edge[1]].Add(edge[0]);
             }
+
+            for (int node = 1; node <= N; ++node)
+                if (!color.ContainsKey(node) && !dfs(node, 0))
+                    return false;
 
             return true;
         }
 
-        private int[] Find(int p, int[] colors)
+        public bool dfs(int node, int c)
         {
-            int color = 0;
+            if (color.ContainsKey(node))
+                return color[node] == c;
 
-            while (colors[p] != p)
-            {
-                p = colors[p];
-                color = color == 0 ? 1 : 0;
-            }
+            color.Add(node, c);
 
-            return new int[] { p, color };
+            foreach (int nei in graph[node])
+                if (!dfs(nei, c ^ 1))
+                    return false;
+
+            return true;
         }
     }
 }
