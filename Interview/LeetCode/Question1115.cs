@@ -13,9 +13,9 @@ namespace Interview.LeetCode
 
     public class FooBar
     {
-        private bool foo = true,
-                     bar = false;
         private int n;
+        private System.Threading.Semaphore foo = new System.Threading.Semaphore(1, 1),
+                                           bar = new System.Threading.Semaphore(0, 1);
 
         public FooBar(int n)
         {
@@ -26,14 +26,12 @@ namespace Interview.LeetCode
         {
             for (int i = 0; i < n; i++)
             {
-                while (!foo)
-                    System.Threading.Thread.Sleep(1);
+                foo.WaitOne();
 
                 // printFoo() outputs "foo". Do not change or remove this line.
                 printFoo();
 
-                foo = false;
-                bar = true;
+                bar.Release();
             }
         }
 
@@ -41,14 +39,12 @@ namespace Interview.LeetCode
         {
             for (int i = 0; i < n; i++)
             {
-                while (!bar)
-                    System.Threading.Thread.Sleep(1);
+                bar.WaitOne();
 
                 // printBar() outputs "bar". Do not change or remove this line.
                 printBar();
 
-                foo = true;
-                bar = false;
+                foo.Release();
             }
         }
     }

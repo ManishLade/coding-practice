@@ -567,7 +567,7 @@
     <Compile Include="LeetCode\Question994.cs" />
     <Compile Include="LeetCode\Question997.cs" />
     <Compile Include="LeetCode\utility.cs" />
-    <Compile Include="Multithreading\Interview1.cs" />
+    <Compile Include="Multithreading\Question1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Multithreading\Multithread.cs" />

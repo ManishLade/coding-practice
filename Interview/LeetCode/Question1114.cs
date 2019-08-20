@@ -13,11 +13,12 @@ namespace Interview.LeetCode
 
     public class Foo
     {
-        int count;
+        private System.Threading.Semaphore second = new System.Threading.Semaphore(0, 1),
+                                           third = new System.Threading.Semaphore(0, 1);
 
         public Foo()
         {
-            this.count = 0;
+
         }
 
         public void First(Action printFirst)
@@ -25,24 +26,22 @@ namespace Interview.LeetCode
             // printFirst() outputs "first". Do not change or remove this line.
             printFirst();
 
-            this.count++;
+            this.second.Release();
         }
 
         public void Second(Action printSecond)
         {
-            while (count < 1)
-                System.Threading.Thread.Sleep(1);
+            this.second.WaitOne();
 
             // printSecond() outputs "second". Do not change or remove this line.
             printSecond();
 
-            this.count++;
+            this.third.Release();
         }
 
         public void Third(Action printThird)
         {
-            while (count < 2)
-                System.Threading.Thread.Sleep(1);
+            this.third.WaitOne();
 
             // printThird() outputs "third". Do not change or remove this line.
             printThird();

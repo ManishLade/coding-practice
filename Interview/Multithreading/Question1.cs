@@ -12,7 +12,7 @@ namespace Interview.Thread
     // 4        1       2       3
     // 3        4       1       2
     // 2        3       4       1
-    class Interview1
+    class Question1
     {
         Queue<string> _content = new Queue<string>();
         int _repeat = 1;
@@ -20,7 +20,7 @@ namespace Interview.Thread
 
         public static void EntryPoint()
         {
-            (new Interview1()).ThreadControl();
+            (new Question1()).ThreadControl();
         }
 
         public void ThreadControl()

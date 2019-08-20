@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question1087
     {
+        public string[] Expand(string S)
+        {
+
+        }
     }
 }
