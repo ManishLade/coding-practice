@@ -65,6 +65,7 @@
     <Compile Include="DataStructure\Heap.cs" />
     <Compile Include="DataStructure\LinkedList.cs" />
     <Compile Include="DataStructure\PriorityQueue.cs" />
+    <Compile Include="LeetCode\Question1087.cs" />
     <Compile Include="LeetCode\Question1102.cs" />
     <Compile Include="LeetCode\Question1010.cs" />
     <Compile Include="LeetCode\Question1019.cs" />
@@ -87,6 +88,8 @@
     <Compile Include="LeetCode\Question1100.cs" />
     <Compile Include="LeetCode\Question1114.cs" />
     <Compile Include="LeetCode\Question1115.cs" />
+    <Compile Include="LeetCode\Question1116.cs" />
+    <Compile Include="LeetCode\Question1117.cs" />
     <Compile Include="LeetCode\Question1120.cs" />
     <Compile Include="LeetCode\Question1124.cs" />
     <Compile Include="LeetCode\Question1129.cs" />
