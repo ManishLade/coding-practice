@@ -34,8 +34,10 @@ namespace Interview.LeetCode
                         T[i][j] = T[i - 1][j - 1];
                     else if (p[j - 1] == '*')
                     {
+                        // * is 0
                         T[i][j] = T[i][j - 2];
 
+                        // * is 1...n
                         if (p[j - 2] == '.' || p[j - 2] == s[i - 1])
                             T[i][j] = T[i][j] | T[i - 1][j];
                     }

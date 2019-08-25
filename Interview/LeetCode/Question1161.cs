@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    class Question42
+    class Question1161
     {
-        //public double FindMedianSortedArrays(int[] nums1, int[] nums2)
-        //{
-
-        //}
     }
 }

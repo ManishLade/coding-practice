@@ -16,6 +16,7 @@ namespace Interview.LeetCode
         }
 
         // https://leetcode.com/problems/remove-k-digits/discuss/88668/Short-Python-one-O(n)-and-one-RegEx
+        // Use stack to resolve this problem.
         public string RemoveKdigits(string num, int k)
         {
             if (k >= num.Length)
