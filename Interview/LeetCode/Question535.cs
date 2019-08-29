@@ -9,11 +9,15 @@ namespace Interview.LeetCode
 {
     class Question535
     {
-        Hashtable hash1 = new Hashtable();
-        Hashtable hash2 = new Hashtable();
+
+    }
+
+    public class CodecQuestion535
+    {
+        Hashtable hash1 = new Hashtable(),
+                  hash2 = new Hashtable();
         string shortStringSource = "abcdefthijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-        // Encodes a URL to a shortened URL
         public string encode(string longUrl)
         {
             StringBuilder shortString = new StringBuilder();
@@ -32,7 +36,6 @@ namespace Interview.LeetCode
             return "http://tinyurl.com/" + shortString.ToString();
         }
 
-        // Decodes a shortened URL to its original URL.
         public string decode(string shortUrl)
         {
             return (string)hash2[shortUrl];
