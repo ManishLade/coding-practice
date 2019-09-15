@@ -10,7 +10,8 @@ namespace Interview.LeetCode
     {
         public int[] SingleNumber(int[] nums)
         {
-            int a = 0, b = 0;
+            int a = 0, 
+                b = 0;
 
             foreach (var n in nums)
                 a ^= n;
