@@ -107,6 +107,8 @@
     <Compile Include="LeetCode\Question1167.cs" />
     <Compile Include="LeetCode\Question1171.cs" />
     <Compile Include="LeetCode\Question122.cs" />
+    <Compile Include="LeetCode\Question123.cs" />
+    <Compile Include="LeetCode\Question188.cs" />
     <Compile Include="LeetCode\Question231.cs" />
     <Compile Include="LeetCode\Question281.cs" />
     <Compile Include="LeetCode\Question298.cs" />
@@ -475,6 +477,7 @@
     <Compile Include="LeetCode\Question709.cs" />
     <Compile Include="LeetCode\Question71.cs" />
     <Compile Include="LeetCode\Question713.cs" />
+    <Compile Include="LeetCode\Question714.cs" />
     <Compile Include="LeetCode\Question716.cs" />
     <Compile Include="LeetCode\Question72.cs" />
     <Compile Include="LeetCode\Question720.cs" />

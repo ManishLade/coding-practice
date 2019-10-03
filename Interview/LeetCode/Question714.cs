@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Interview.LeetCode
 {
-    class Question309
+    class Question714
     {
         public static void EntryPoint()
         {
-            (new Question309()).MaxProfit(new int[] { 2, 1, 4 });
+            //(new Question714()).MaxProfit(new int[] { 1, 3, 2, 8, 4, 9 }, 2);
+            (new Question714()).MaxProfit(new int[] { 4, 3, 2, 1 }, 2);
         }
 
-        public int MaxProfit(int[] prices)
+        public int MaxProfit(int[] prices, int fee)
         {
             if (prices.Length <= 1)
                 return 0;
@@ -28,10 +29,10 @@ namespace Interview.LeetCode
 
             for (int i = 1; i < prices.Length; i++)
             {
-                buy[i] = i == 1 ? (prices[0] > prices[1] ? 0 - prices[1] : buy[0]) : Math.Max(skip[i - 1], sell[i - 2]) - prices[i];
+                buy[i] = Math.Max(skip[i - 1], sell[i - 1]) - prices[i];
                 hold[i] = Math.Max(buy[i - 1], hold[i - 1]);
                 skip[i] = Math.Max(skip[i - 1], sell[i - 1]);
-                sell[i] = Math.Max(buy[i - 1], hold[i - 1]) + prices[i];
+                sell[i] = Math.Max(buy[i - 1], hold[i - 1]) + prices[i] - fee;
             }
 
             int max = Math.Max(buy[prices.Length - 1], hold[prices.Length - 1]);
