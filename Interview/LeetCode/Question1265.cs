@@ -8,5 +8,26 @@ namespace Interview.LeetCode
 {
     class Question1265
     {
+        public void PrintLinkedListInReverse(ImmutableListNode head)
+        {
+            if (head == null)
+                return;
+
+            PrintLinkedListInReverse(head.getNext());
+            head.printValue();
+        }
+
+        public class ImmutableListNode
+        {
+            public void printValue()
+            {
+
+            }
+
+            public ImmutableListNode getNext()
+            {
+                return null;
+            }
+        }
     }
 }
