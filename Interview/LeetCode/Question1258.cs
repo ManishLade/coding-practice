@@ -8,5 +8,9 @@ namespace Interview.LeetCode
 {
     class Question1258
     {
+        //public IList<string> GenerateSentences(IList<IList<string>> synonyms, string text)
+        //{
+
+        //}
     }
 }
