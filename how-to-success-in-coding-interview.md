@@ -199,3 +199,6 @@ int[] count = new int[26];
 * Use two arrays to determine four directions while travese a graph.
 int[] rowChange = new int[] { -1, 1, 0, 0};
 int[] colChange = new int[] { 0, 0, -1, 1};
+
+* Interval
+Meeting room related question. Or merge / remove interval problems (https://leetcode.com/problems/remove-interval/description/)
